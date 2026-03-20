@@ -1,888 +1,953 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIDAL – Domy z duszy drewna | Prefabrykowane domy szkieletowe</title>
-<meta content="VIDAL – projektujemy i budujemy prefabrykowane domy szkieletowe od 1988 roku. Poznań. Ponad 300 zrealizowanych domów." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+<meta name="description" content="VIDAL – projektujemy i budujemy prefabrykowane domy szkieletowe od 1988 roku. Poznań. Ponad 300 zrealizowanych domów.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <!-- ========== NAVIGATION ========== -->
 <div class="scroll-progress" id="scrollProgress"></div>
 <nav class="nav" id="nav">
-<a class="nav-logo" href="#">VIDAL<span>.</span></a>
-<div class="nav-lang">
-<button class="lang-btn" onclick="setLang('pl')" title="Polski">
-<svg viewbox="0 0 640 480"><rect fill="#fff" height="240" width="640"></rect><rect fill="#dc143c" height="240" width="640" y="240"></rect></svg>
-</button>
-<button class="lang-btn" onclick="setLang('en')" title="English">
-<svg viewbox="0 0 640 480"><path d="M0 0h640v480H0z" fill="#012169"></path><path d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z" fill="#FFF"></path><path d="m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z" fill="#C8102E"></path><path d="M241 0v480h160V0zM0 160v160h640V160z" fill="#FFF"></path><path d="M0 193v96h640v-96zM273 0v480h96V0z" fill="#C8102E"></path></svg>
-</button>
-<button class="lang-btn" onclick="setLang('de')" title="Deutsch">
-<svg viewbox="0 0 640 480"><rect fill="#000" height="160" width="640"></rect><rect fill="#D00" height="160" width="640" y="160"></rect><rect fill="#FFCE00" height="160" width="640" y="320"></rect></svg>
-</button>
-</div>
-<ul class="nav-links">
-<li><a data-i18n="nav_about" href="#o-nas">O nas</a></li>
-<li><a data-i18n="nav_models" href="#modele">Modele</a></li>
-<li><a data-i18n="nav_tech" href="#technologia">Technologia</a></li>
-<li><a data-i18n="nav_realizations" href="#realizacje">Realizacje</a></li>
-<li><a data-i18n="nav_factory" href="#fabryka">Fabryka</a></li>
-<li><a href="#kontakt">Kontakt</a></li>
-</ul>
-<button aria-label="Menu" class="nav-hamburger" id="hamburger">
-<span></span><span></span><span></span>
-</button>
+  <a href="#" class="nav-logo">VIDAL<span>.</span></a>
+  <div class="nav-lang">
+    <button class="lang-btn" onclick="setLang('pl')" title="Polski">
+      <svg viewBox="0 0 640 480"><rect width="640" height="240" fill="#fff"/><rect y="240" width="640" height="240" fill="#dc143c"/></svg>
+    </button>
+    <button class="lang-btn" onclick="setLang('en')" title="English">
+      <svg viewBox="0 0 640 480"><path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0z"/><path fill="#C8102E" d="m424 281 216 159v40L369 281zm-184 20 6 35L54 480H0zM640 0v3L391 191l2-44L590 0zM0 0l239 176h-60L0 42z"/><path fill="#FFF" d="M241 0v480h160V0zM0 160v160h640V160z"/><path fill="#C8102E" d="M0 193v96h640v-96zM273 0v480h96V0z"/></svg>
+    </button>
+    <button class="lang-btn" onclick="setLang('de')" title="Deutsch">
+      <svg viewBox="0 0 640 480"><rect width="640" height="160" fill="#000"/><rect y="160" width="640" height="160" fill="#D00"/><rect y="320" width="640" height="160" fill="#FFCE00"/></svg>
+    </button>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#o-nas" data-i18n="nav_about">O nas</a></li>
+    <li><a href="#modele" data-i18n="nav_models">Modele</a></li>
+    <li><a href="#technologia" data-i18n="nav_tech">Technologia</a></li>
+    <li><a href="#realizacje" data-i18n="nav_realizations">Realizacje</a></li>
+    <li><a href="#fabryka" data-i18n="nav_factory">Fabryka</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav_about" href="#o-nas" onclick="closeMobile()">O nas</a>
-<a data-i18n="nav_models" href="#modele" onclick="closeMobile()">Modele</a>
-<a data-i18n="nav_tech" href="#technologia" onclick="closeMobile()">Technologia</a>
-<a data-i18n="nav_realizations" href="#realizacje" onclick="closeMobile()">Realizacje</a>
-<a data-i18n="nav_factory" href="#fabryka" onclick="closeMobile()">Fabryka</a>
-<a data-i18n="nav_contact" href="#kontakt" onclick="closeMobile()">Kontakt</a>
+  <a href="#o-nas" onclick="closeMobile()" data-i18n="nav_about">O nas</a>
+  <a href="#modele" onclick="closeMobile()" data-i18n="nav_models">Modele</a>
+  <a href="#technologia" onclick="closeMobile()" data-i18n="nav_tech">Technologia</a>
+  <a href="#realizacje" onclick="closeMobile()" data-i18n="nav_realizations">Realizacje</a>
+  <a href="#fabryka" onclick="closeMobile()" data-i18n="nav_factory">Fabryka</a>
+  <a href="#kontakt" onclick="closeMobile()" data-i18n="nav_contact">Kontakt</a>
 </div>
+
 <!-- ========== HERO ========== -->
 <section class="hero" id="hero">
-<div class="hero-bg" data-parallax="0.4"></div>
-<div class="hero-content">
-<p class="hero-subtitle" data-i18n="hero_subtitle">Domy prefabrykowane · Poznań · od 1988</p>
-<h1 class="hero-title" data-i18n-html="hero_title">Dom<br/><em>z duszy</em><br/>drewna</h1>
-<p class="hero-description" data-i18n="hero_desc">Projektujemy i budujemy prefabrykowane domy szkieletowe – precyzyjnie, szybko i na pokolenia.</p>
-<div class="hero-buttons">
-<a class="btn-primary" data-i18n="btn_models" href="#modele">Poznaj modele</a>
-<a class="btn-secondary" data-i18n="btn_consult" href="#kontakt">Bezpłatna konsultacja</a>
-</div>
-</div>
-<div class="hero-stats">
-<div class="hero-stat">
-<div class="hero-stat-number" data-target="35">0+</div>
-<div class="hero-stat-label" data-i18n="stat_years">Lat doświadczenia</div>
-</div>
-<div class="hero-stat">
-<div class="hero-stat-number" data-target="300">0+</div>
-<div class="hero-stat-label" data-i18n="stat_homes">Zrealizowanych domów</div>
-</div>
-<div class="hero-stat">
-<div class="hero-stat-number" data-target="90">0</div>
-<div class="hero-stat-label" data-i18n="stat_days">Dni – czas realizacji</div>
-</div>
-</div>
-<div class="hero-scroll">
-<span data-i18n="scroll">Scroll</span>
-<div class="scroll-line"></div>
-</div>
+  <div class="hero-bg" data-parallax="0.4"></div>
+
+  <div class="hero-content">
+    <p class="hero-subtitle" data-i18n="hero_subtitle">Domy prefabrykowane &middot; Poznań &middot; od 1988</p>
+    <h1 class="hero-title" data-i18n-html="hero_title">Dom<br><em>z duszy</em><br>drewna</h1>
+    <p class="hero-description" data-i18n="hero_desc">Projektujemy i budujemy prefabrykowane domy szkieletowe – precyzyjnie, szybko i na pokolenia.</p>
+    <div class="hero-buttons">
+      <a href="#modele" class="btn-primary" data-i18n="btn_models">Poznaj modele</a>
+      <a href="#kontakt" class="btn-secondary" data-i18n="btn_consult">Bezpłatna konsultacja</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-number" data-target="35">0+</div>
+      <div class="hero-stat-label" data-i18n="stat_years">Lat doświadczenia</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number" data-target="300">0+</div>
+      <div class="hero-stat-label" data-i18n="stat_homes">Zrealizowanych domów</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number" data-target="90">0</div>
+      <div class="hero-stat-label" data-i18n="stat_days">Dni – czas realizacji</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span data-i18n="scroll">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
+
 <!-- ========== O NAS ========== -->
 <section class="section about" id="o-nas">
-<div class="about-grid">
-<div>
-<div class="about-image reveal-zoom">
-<img alt="Montaż domu szkieletowego VIDAL" src="img/asset-002.jpg" style="width:100%;height:100%;object-fit:cover;"/>
-</div>
-</div>
-<div>
-<div class="section-label" data-i18n="about_label">O firmie</div>
-<h2 class="section-title" data-i18n-html="about_title">Budujemy domy<br/><em>od ponad 35 lat</em></h2>
-<p class="section-text" data-i18n="about_text1">
+  <div class="about-grid">
+    <div>
+      <div class="about-image reveal-zoom">
+        <img src="about.jpg" alt="Montaż domu szkieletowego VIDAL" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+    <div>
+      <div class="section-label" data-i18n="about_label">O firmie</div>
+      <h2 class="section-title" data-i18n-html="about_title">Budujemy domy<br><em>od ponad 35 lat</em></h2>
+      <p class="section-text" data-i18n="about_text1">
         Firma VIDAL od ponad 35 lat zajmuje się projektowaniem i budową prefabrykowanych domów szkieletowych. Domy powstają w naszej fabryce, co pozwala uzyskać wysoką jakość i precyzję wykonania.
       </p>
-<div class="gold-divider"></div>
-<p class="section-text" data-i18n="about_countries_label" style="font-size:0.9rem; margin-bottom: 0.5rem; color: var(--text-muted);">Nasze realizacje znajdziesz w:</p>
-<div class="about-countries">
-<span class="about-country" data-i18n="country_pl">Polska</span>
-<span class="about-country" data-i18n="country_de">Niemcy</span>
-<span class="about-country" data-i18n="country_ch">Szwajcaria</span>
-<span class="about-country" data-i18n="country_no">Norwegia</span>
-</div>
-</div>
-</div>
+      <div class="gold-divider"></div>
+      
+      <p class="section-text" style="font-size:0.9rem; margin-bottom: 0.5rem; color: var(--text-muted);" data-i18n="about_countries_label">Nasze realizacje znajdziesz w:</p>
+      <div class="about-countries">
+        <span class="about-country" data-i18n="country_pl">Polska</span>
+        <span class="about-country" data-i18n="country_de">Niemcy</span>
+        <span class="about-country" data-i18n="country_ch">Szwajcaria</span>
+        <span class="about-country" data-i18n="country_no">Norwegia</span>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ========== PROCES ========== -->
 <section class="section" id="proces">
-<div>
-<div class="section-label" data-i18n="process_label">Jak budujemy</div>
-<h2 class="section-title" data-i18n-html="process_title">Proces budowy <em>domu</em></h2>
-<p class="section-text" data-i18n="process_desc">Od projektu do odbioru kluczy – każdy etap jest precyzyjnie zaplanowany.</p>
-</div>
-<div class="process-grid stagger-group">
-<div class="process-step reveal-up-scale">
-<div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
-<img alt="Projekt domu" src="img/asset-003.jpg" style="width:100%;height:180px;object-fit:cover;display:block;"/>
-</div>
-<div class="process-number">01</div>
-<h3 class="process-step-title" data-i18n="process_1_title">Projekt domu</h3>
-<p class="process-step-desc" data-i18n="process_1_desc">Indywidualny projekt dopasowany do potrzeb inwestora i wymagań działki.</p>
-</div>
-<div class="process-step reveal-up-scale">
-<div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
-<img alt="Produkcja w fabryce" src="img/asset-004.jpg" style="width:100%;height:180px;object-fit:cover;display:block;"/>
-</div>
-<div class="process-number">02</div>
-<h3 class="process-step-title" data-i18n="process_2_title">Produkcja w fabryce</h3>
-<p class="process-step-desc" data-i18n="process_2_desc">Prefabrykowane ściany i elementy konstrukcyjne powstają w kontrolowanych warunkach.</p>
-</div>
-<div class="process-step reveal-up-scale">
-<div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
-<img alt="Transport elementów" src="img/asset-005.jpg" style="width:100%;height:180px;object-fit:cover;display:block;"/>
-</div>
-<div class="process-number">03</div>
-<h3 class="process-step-title" data-i18n="process_3_title">Transport</h3>
-<p class="process-step-desc" data-i18n="process_3_desc">Gotowe elementy dostarczane na plac budowy – sprawnie i bezpiecznie.</p>
-</div>
-<div class="process-step reveal-up-scale">
-<div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
-<img alt="Montaż domu" src="img/asset-006.jpg" style="width:100%;height:180px;object-fit:cover;display:block;"/>
-</div>
-<div class="process-number">04</div>
-<h3 class="process-step-title" data-i18n="process_4_title">Montaż domu</h3>
-<p class="process-step-desc" data-i18n="process_4_desc">Montaż konstrukcji na placu budowy – dom powstaje w zaledwie kilka tygodni.</p>
-</div>
-</div>
+  <div>
+    <div class="section-label" data-i18n="process_label">Jak budujemy</div>
+    <h2 class="section-title" data-i18n-html="process_title">Proces budowy <em>domu</em></h2>
+    <p class="section-text" data-i18n="process_desc">Od projektu do odbioru kluczy – każdy etap jest precyzyjnie zaplanowany.</p>
+  </div>
+  <div class="process-grid stagger-group">
+    <div class="process-step reveal-up-scale">
+      <div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+        <img src="process-01.jpg" alt="Projekt domu" style="width:100%;height:180px;object-fit:cover;display:block;">
+      </div>
+      <div class="process-number">01</div>
+      <h3 class="process-step-title" data-i18n="process_1_title">Projekt domu</h3>
+      <p class="process-step-desc" data-i18n="process_1_desc">Indywidualny projekt dopasowany do potrzeb inwestora i wymagań działki.</p>
+    </div>
+    <div class="process-step reveal-up-scale">
+      <div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+        <img src="process-02.jpg" alt="Produkcja w fabryce" style="width:100%;height:180px;object-fit:cover;display:block;">
+      </div>
+      <div class="process-number">02</div>
+      <h3 class="process-step-title" data-i18n="process_2_title">Produkcja w fabryce</h3>
+      <p class="process-step-desc" data-i18n="process_2_desc">Prefabrykowane ściany i elementy konstrukcyjne powstają w kontrolowanych warunkach.</p>
+    </div>
+    <div class="process-step reveal-up-scale">
+      <div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+        <img src="process-03.jpg" alt="Transport elementów" style="width:100%;height:180px;object-fit:cover;display:block;">
+      </div>
+      <div class="process-number">03</div>
+      <h3 class="process-step-title" data-i18n="process_3_title">Transport</h3>
+      <p class="process-step-desc" data-i18n="process_3_desc">Gotowe elementy dostarczane na plac budowy – sprawnie i bezpiecznie.</p>
+    </div>
+    <div class="process-step reveal-up-scale">
+      <div class="process-step-img" style="margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+        <img src="process-04.jpg" alt="Montaż domu" style="width:100%;height:180px;object-fit:cover;display:block;">
+      </div>
+      <div class="process-number">04</div>
+      <h3 class="process-step-title" data-i18n="process_4_title">Montaż domu</h3>
+      <p class="process-step-desc" data-i18n="process_4_desc">Montaż konstrukcji na placu budowy – dom powstaje w zaledwie kilka tygodni.</p>
+    </div>
+  </div>
 </section>
+
 <!-- ========== TECHNOLOGIA ========== -->
 <section class="section tech" id="technologia">
-<div>
-<div class="section-label" data-i18n="tech_label">Technologia</div>
-<h2 class="section-title" data-i18n-html="tech_title">Przekrój <em>ściany zewnętrznej</em></h2>
-<p class="section-text">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
-</div>
-<div class="wall-tabs" style="display:flex;gap:0.8rem;margin-top:3rem;flex-wrap:wrap;">
-<button class="wall-tab active" id="wall-tab-0">
-<span class="wall-tab-u">Wewnętrzna</span>
-<span class="wall-tab-label" data-i18n="wall_tab_1">Ściana wewnętrzna</span>
-</button>
-<button class="wall-tab" id="wall-tab-1">
-<span class="wall-tab-u">Drewniana</span>
-<span class="wall-tab-label" data-i18n="wall_tab_2">Elewacja drewniana</span>
-</button>
-<button class="wall-tab" id="wall-tab-2">
-<span class="wall-tab-u">U = 0,15</span>
-<span class="wall-tab-label" data-i18n="wall_tab_3">Energooszczędna</span>
-</button>
-<button class="wall-tab" id="wall-tab-3">
-<span class="wall-tab-u">U = 0,25</span>
-<span class="wall-tab-label" data-i18n="wall_tab_4">Standardowa</span>
-</button>
-</div>
-<div class="wall-display" style="margin-top:2.5rem;">
-<div class="wall-panel" id="wall-panel-0" style="display:flex;">
-<div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-<img alt="Przekrój ściany wewnętrznej" src="img/asset-007.png" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;"/>
-</div>
-<div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-<div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-<div class="tech-u-value-number">Ściana wewnętrzna</div>
-<div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Izolacja akustyczna</div>
-</div>
-<div class="wall-layers">
-<div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna akustyczna</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
-</div>
-<div class="cert-tech">
-<div class="cert-tech-label">Dokumentacja i certyfikacja</div>
-<div class="cert-preview" data-cert="0">
-<img alt="DIN 1052" class="cert-thumb" src="img/asset-008.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Certyfikat DIN 1052</div>
-<div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="1">
-<img alt="Cochran Fellowship" class="cert-thumb" src="img/asset-009.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Cochran Fellowship</div>
-<div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="2">
-<img alt="Wood Housing" class="cert-thumb" src="img/asset-010.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Wood Housing Program</div>
-<div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="wall-panel" id="wall-panel-1" style="display:none;">
-<div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-<img alt="Przekrój ściany z elewacją drewnianą" src="img/asset-011.png" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;"/>
-</div>
-<div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-<div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-<div class="tech-u-value-number" style="font-size:1.4rem;">Elewacja drewniana</div>
-<div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Fasada wentylowana</div>
-</div>
-<div class="wall-layers">
-<div class="wall-layer"><span class="wall-layer-thickness">26 mm</span><span class="wall-layer-name">Elewacja drewniana</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">30 mm</span><span class="wall-layer-name">Szczelina wentylacyjna</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name">Membrana wiatroizolacja</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna w konstrukcji</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacyjna)</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
-</div>
-<div class="cert-tech">
-<div class="cert-tech-label">Dokumentacja i certyfikacja</div>
-<div class="cert-preview" data-cert="0">
-<img alt="DIN 1052" class="cert-thumb" src="img/asset-008.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Certyfikat DIN 1052</div>
-<div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="1">
-<img alt="Cochran Fellowship" class="cert-thumb" src="img/asset-009.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Cochran Fellowship</div>
-<div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="2">
-<img alt="Wood Housing" class="cert-thumb" src="img/asset-010.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Wood Housing Program</div>
-<div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="wall-panel" id="wall-panel-2" style="display:none;">
-<div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-<img alt="Przekrój ściany energooszczędnej U=0,15" src="img/asset-012.png" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;"/>
-</div>
-<div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-<div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-<div class="tech-u-value-number">U = 0,15</div>
-<div class="tech-u-value-unit">W/m²K</div>
-<div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
-</div>
-<div class="wall-layers">
-<div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">150 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
-</div>
-<div class="cert-tech">
-<div class="cert-tech-label">Dokumentacja i certyfikacja</div>
-<div class="cert-preview" data-cert="0">
-<img alt="DIN 1052" class="cert-thumb" src="img/asset-008.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Certyfikat DIN 1052</div>
-<div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="1">
-<img alt="Cochran Fellowship" class="cert-thumb" src="img/asset-009.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Cochran Fellowship</div>
-<div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="2">
-<img alt="Wood Housing" class="cert-thumb" src="img/asset-010.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Wood Housing Program</div>
-<div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="wall-panel" id="wall-panel-3" style="display:none;">
-<div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-<img alt="Przekrój ściany standardowej U=0,25" src="img/asset-013.png" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;"/>
-</div>
-<div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-<div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-<div class="tech-u-value-number">U = 0,25</div>
-<div class="tech-u-value-unit">W/m²K</div>
-<div class="tech-u-value-label">Współczynnik przenikania ciepła</div>
-</div>
-<div class="wall-layers">
-<div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
-<div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
-</div>
-<div class="cert-tech">
-<div class="cert-tech-label">Dokumentacja i certyfikacja</div>
-<div class="cert-preview" data-cert="0">
-<img alt="DIN 1052" class="cert-thumb" src="img/asset-008.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Certyfikat DIN 1052</div>
-<div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="1">
-<img alt="Cochran Fellowship" class="cert-thumb" src="img/asset-009.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Cochran Fellowship</div>
-<div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-</div>
-</div>
-<div class="cert-preview" data-cert="2">
-<img alt="Wood Housing" class="cert-thumb" src="img/asset-010.jpg"/>
-<div class="cert-pv-info">
-<div class="cert-pv-title">Wood Housing Program</div>
-<div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Certification badges -->
+  <div>
+      <div class="section-label" data-i18n="tech_label">Technologia</div>
+      <h2 class="section-title" data-i18n-html="tech_title">Przekrój <em>ściany zewnętrznej</em></h2>
+      <p class="section-text">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
+    </div>
+
+    <div class="wall-tabs" style="display:flex;gap:0.8rem;margin-top:3rem;flex-wrap:wrap;">
+      <button class="wall-tab active" id="wall-tab-0">
+        <span class="wall-tab-u">Wewnętrzna</span>
+        <span class="wall-tab-label" data-i18n="wall_tab_1">Ściana wewnętrzna</span>
+      </button>
+      <button class="wall-tab" id="wall-tab-1">
+        <span class="wall-tab-u">Drewniana</span>
+        <span class="wall-tab-label" data-i18n="wall_tab_2">Elewacja drewniana</span>
+      </button>
+      <button class="wall-tab" id="wall-tab-2">
+        <span class="wall-tab-u">U = 0,15</span>
+        <span class="wall-tab-label" data-i18n="wall_tab_3">Energooszczędna</span>
+      </button>
+      <button class="wall-tab" id="wall-tab-3">
+        <span class="wall-tab-u">U = 0,25</span>
+        <span class="wall-tab-label" data-i18n="wall_tab_4">Standardowa</span>
+      </button>
+    </div>
+
+    <div class="wall-display" style="margin-top:2.5rem;">
+      <div class="wall-panel" id="wall-panel-0" style="display:flex;">
+        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
+          <img src="wall-panel-1.png" alt="Przekrój ściany wewnętrznej" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;">
+        </div>
+        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
+          <div class="tech-u-value-number">Ściana wewnętrzna</div>
+          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Izolacja akustyczna</div>
+          </div>
+          <div class="wall-layers">
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna akustyczna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          </div>
+            <div class="cert-tech">
+              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-preview" data-cert="0">
+                <img class="cert-thumb" src="cert-thumb-1.jpg" alt="DIN 1052">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="1">
+                <img class="cert-thumb" src="cert-thumb-2.jpg" alt="Cochran Fellowship">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Cochran Fellowship</div>
+                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="2">
+                <img class="cert-thumb" src="cert-thumb-3.jpg" alt="Wood Housing">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Wood Housing Program</div>
+                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                </div>
+              </div>
+            </div>
+
+            
+        </div>
+      </div>
+
+      <div class="wall-panel" id="wall-panel-1" style="display:none;">
+        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
+          <img src="wall-panel-2.png" alt="Przekrój ściany z elewacją drewnianą" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;">
+        </div>
+        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
+          <div class="tech-u-value-number" style="font-size:1.4rem;">Elewacja drewniana</div>
+          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Fasada wentylowana</div>
+          </div>
+          <div class="wall-layers">
+          <div class="wall-layer"><span class="wall-layer-thickness">26 mm</span><span class="wall-layer-name">Elewacja drewniana</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">30 mm</span><span class="wall-layer-name">Szczelina wentylacyjna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name">Membrana wiatroizolacja</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacyjna)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
+          </div>
+            <div class="cert-tech">
+              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-preview" data-cert="0">
+                <img class="cert-thumb" src="cert-thumb-1.jpg" alt="DIN 1052">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="1">
+                <img class="cert-thumb" src="cert-thumb-2.jpg" alt="Cochran Fellowship">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Cochran Fellowship</div>
+                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="2">
+                <img class="cert-thumb" src="cert-thumb-3.jpg" alt="Wood Housing">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Wood Housing Program</div>
+                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                </div>
+              </div>
+            </div>
+
+            
+        </div>
+      </div>
+
+      <div class="wall-panel" id="wall-panel-2" style="display:none;">
+        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
+          <img src="wall-panel-3.png" alt="Przekrój ściany energooszczędnej U=0,15" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;">
+        </div>
+        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
+            <div class="tech-u-value-number">U = 0,15</div>
+            <div class="tech-u-value-unit">W/m²K</div>
+            <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
+          </div>
+          <div class="wall-layers">
+          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">150 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          </div>
+            <div class="cert-tech">
+              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-preview" data-cert="0">
+                <img class="cert-thumb" src="cert-thumb-1.jpg" alt="DIN 1052">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="1">
+                <img class="cert-thumb" src="cert-thumb-2.jpg" alt="Cochran Fellowship">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Cochran Fellowship</div>
+                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="2">
+                <img class="cert-thumb" src="cert-thumb-3.jpg" alt="Wood Housing">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Wood Housing Program</div>
+                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                </div>
+              </div>
+            </div>
+
+            
+        </div>
+      </div>
+
+      <div class="wall-panel" id="wall-panel-3" style="display:none;">
+        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
+          <img src="wall-panel-4.png" alt="Przekrój ściany standardowej U=0,25" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;">
+        </div>
+        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
+            <div class="tech-u-value-number">U = 0,25</div>
+            <div class="tech-u-value-unit">W/m²K</div>
+            <div class="tech-u-value-label">Współczynnik przenikania ciepła</div>
+          </div>
+          <div class="wall-layers">
+          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          </div>
+            <div class="cert-tech">
+              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-preview" data-cert="0">
+                <img class="cert-thumb" src="cert-thumb-1.jpg" alt="DIN 1052">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="1">
+                <img class="cert-thumb" src="cert-thumb-2.jpg" alt="Cochran Fellowship">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Cochran Fellowship</div>
+                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                </div>
+              </div>
+              <div class="cert-preview" data-cert="2">
+                <img class="cert-thumb" src="cert-thumb-3.jpg" alt="Wood Housing">
+                <div class="cert-pv-info">
+                  <div class="cert-pv-title">Wood Housing Program</div>
+                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                </div>
+              </div>
+            </div>
+
+            
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification badges -->
+    
+
 </section>
+
 <!-- ========== KVH DREWNO ========== -->
 <section class="section" id="kvh">
-<div class="kvh-grid">
-<div>
-<div class="section-label" data-i18n="kvh_label">Materiał</div>
-<h2 class="section-title" data-i18n-html="kvh_title">Konstrukcja z drewna <em>KVH C24</em></h2>
-<p class="section-text" data-i18n="kvh_text1">
+  <div class="kvh-grid">
+    <div>
+      <div class="section-label" data-i18n="kvh_label">Materiał</div>
+      <h2 class="section-title" data-i18n-html="kvh_title">Konstrukcja z drewna <em>KVH C24</em></h2>
+      <p class="section-text" data-i18n="kvh_text1">
         W konstrukcji naszych domów stosujemy certyfikowane drewno konstrukcyjne KVH w klasie wytrzymałości C24 – materiał wykorzystywany w nowoczesnym budownictwie drewnianym w całej Europie.
       </p>
-<div class="gold-divider"></div>
-<p class="section-text" data-i18n="kvh_text2" style="font-size:0.95rem;">
+      <div class="gold-divider"></div>
+      <p class="section-text" style="font-size:0.95rem;" data-i18n="kvh_text2">
         KVH (Konstruktionsvollholz) to specjalnie przygotowane drewno konstrukcyjne, które przechodzi kontrolowany proces suszenia komorowego oraz precyzyjnej obróbki przemysłowej. Dzięki temu osiąga stabilną wilgotność około 15%, co znacząco ogranicza ryzyko późniejszych odkształceń i pęknięć konstrukcji.
       </p>
-<p class="section-text" data-i18n="kvh_text3" style="font-size:0.95rem; margin-top:1rem;">
+      <p class="section-text" style="font-size:0.95rem; margin-top:1rem;" data-i18n="kvh_text3">
         Elementy KVH są czterostronnie strugane i dokładnie kalibrowane – idealnie proste, z milimetrową precyzją wymiarów.
       </p>
-</div>
-<div>
-<div class="kvh-badge reveal-scale">
-<div class="kvh-badge-inner">
-<span class="kvh-badge-label" data-i18n="kvh_badge_label">Klasa wytrzymałości</span>
-<span class="kvh-badge-value">C24</span>
-<span class="kvh-badge-sub">PN-EN 338</span>
-</div>
-</div>
-<div class="kvh-stat-row reveal-scale">
-<div class="kvh-stat-item">
-<span class="kvh-stat-number">~15%</span>
-<span class="kvh-stat-desc" data-i18n="kvh_stat1">Wilgotność po suszeniu komorowym</span>
-</div>
-<div class="kvh-stat-item">
-<span class="kvh-stat-number">4</span>
-<span class="kvh-stat-desc" data-i18n="kvh_stat2">Strony strugane i kalibrowane</span>
-</div>
-</div>
-</div>
-</div>
-<div class="kvh-features" style="margin-top:4rem;">
-<div class="section-label" data-i18n="kvh_why">Dlaczego KVH C24</div>
-<div class="kvh-features-grid stagger-group">
-<div class="kvh-feature reveal-scale-soft">
-<div class="kvh-feature-icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-</div>
-<h3 class="kvh-feature-title" data-i18n="kvh_f1_title">Wytrzymałość konstrukcyjna</h3>
-<p class="kvh-feature-desc" data-i18n="kvh_f1_desc">Klasa C24 oznacza wysoką wytrzymałość zgodną z normą europejską PN-EN 338. Materiał przeznaczony do elementów przenoszących duże obciążenia.</p>
-</div>
-<div class="kvh-feature reveal-scale-soft">
-<div class="kvh-feature-icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M9 3v18"></path></svg>
-</div>
-<h3 class="kvh-feature-title" data-i18n="kvh_f2_title">Stabilność wymiarowa</h3>
-<p class="kvh-feature-desc" data-i18n="kvh_f2_desc">Suszenie komorowe i selekcja eliminują wady materiału, znacząco zmniejszając ryzyko skręcania czy pękania elementów konstrukcji.</p>
-</div>
-<div class="kvh-feature reveal-scale-soft">
-<div class="kvh-feature-icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-</div>
-<h3 class="kvh-feature-title" data-i18n="kvh_f3_title">Precyzja i jakość wykonania</h3>
-<p class="kvh-feature-desc" data-i18n="kvh_f3_desc">Czterostronne struganie zapewnia idealnie gładką powierzchnię oraz wysoką dokładność, co przekłada się na trwałość całego domu.</p>
-</div>
-<div class="kvh-feature reveal-scale-soft">
-<div class="kvh-feature-icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
-</div>
-<h3 class="kvh-feature-title" data-i18n="kvh_f4_title">Europejski standard</h3>
-<p class="kvh-feature-desc" data-i18n="kvh_f4_desc">Drewno KVH jest standardem w budownictwie drewnianym w Niemczech, Austrii i krajach skandynawskich – wszędzie, gdzie liczy się trwałość i bezpieczeństwo.</p>
-</div>
-</div>
-</div>
+      
+
+    </div>
+    <div>
+      <div class="kvh-badge reveal-scale">
+        <div class="kvh-badge-inner">
+          <span class="kvh-badge-label" data-i18n="kvh_badge_label">Klasa wytrzymałości</span>
+          <span class="kvh-badge-value">C24</span>
+          <span class="kvh-badge-sub">PN-EN 338</span>
+        </div>
+      </div>
+      <div class="kvh-stat-row reveal-scale">
+        <div class="kvh-stat-item">
+          <span class="kvh-stat-number">~15%</span>
+          <span class="kvh-stat-desc" data-i18n="kvh_stat1">Wilgotność po suszeniu komorowym</span>
+        </div>
+        <div class="kvh-stat-item">
+          <span class="kvh-stat-number">4</span>
+          <span class="kvh-stat-desc" data-i18n="kvh_stat2">Strony strugane i kalibrowane</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kvh-features" style="margin-top:4rem;">
+    <div class="section-label" data-i18n="kvh_why">Dlaczego KVH C24</div>
+    <div class="kvh-features-grid stagger-group">
+
+      <div class="kvh-feature reveal-scale-soft">
+        <div class="kvh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="kvh-feature-title" data-i18n="kvh_f1_title">Wytrzymałość konstrukcyjna</h3>
+        <p class="kvh-feature-desc" data-i18n="kvh_f1_desc">Klasa C24 oznacza wysoką wytrzymałość zgodną z normą europejską PN-EN 338. Materiał przeznaczony do elementów przenoszących duże obciążenia.</p>
+      </div>
+
+      <div class="kvh-feature reveal-scale-soft">
+        <div class="kvh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+        </div>
+        <h3 class="kvh-feature-title" data-i18n="kvh_f2_title">Stabilność wymiarowa</h3>
+        <p class="kvh-feature-desc" data-i18n="kvh_f2_desc">Suszenie komorowe i selekcja eliminują wady materiału, znacząco zmniejszając ryzyko skręcania czy pękania elementów konstrukcji.</p>
+      </div>
+
+      <div class="kvh-feature reveal-scale-soft">
+        <div class="kvh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="kvh-feature-title" data-i18n="kvh_f3_title">Precyzja i jakość wykonania</h3>
+        <p class="kvh-feature-desc" data-i18n="kvh_f3_desc">Czterostronne struganie zapewnia idealnie gładką powierzchnię oraz wysoką dokładność, co przekłada się na trwałość całego domu.</p>
+      </div>
+
+      <div class="kvh-feature reveal-scale-soft">
+        <div class="kvh-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="kvh-feature-title" data-i18n="kvh_f4_title">Europejski standard</h3>
+        <p class="kvh-feature-desc" data-i18n="kvh_f4_desc">Drewno KVH jest standardem w budownictwie drewnianym w Niemczech, Austrii i krajach skandynawskich – wszędzie, gdzie liczy się trwałość i bezpieczeństwo.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+
 <!-- ========== MODELE ========== -->
 <!-- ========== OFERTA ========== -->
 <section class="section" id="modele">
-<div>
-<div class="section-label" data-i18n="models_label">Oferta</div>
-<h2 class="section-title">Budujemy <em>każdy typ</em> domu</h2>
-<p class="section-text" style="font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;">Realizujemy domy na podstawie projektów wybranych przez naszych klientów — zarówno z gotowych katalogów, jak i indywidualnych pracowni architektonicznych. Niezależnie od stylu i wielkości, każdy projekt dostosowujemy do technologii prefabrykowanej konstrukcji drewnianej.</p>
-</div>
-<div class="offer-types">
-<div class="offer-type">
-<div class="offer-icon">
-<svg fill="none" height="40" stroke="currentColor" stroke-width="1.2" viewbox="0 0 48 48" width="40">
-<rect height="18" rx="1.5" width="36" x="6" y="22"></rect>
-<path d="M3 22l21-13 21 13"></path>
-<rect height="10" rx="1" width="12" x="18" y="30"></rect>
-</svg>
-</div>
-<h3 class="offer-type-name">Domy parterowe</h3>
-<p class="offer-type-desc">Funkcjonalne układy na jednym poziomie. Idealne dla rodzin ceniących wygodę i bezprogowy komfort.</p>
-</div>
-<div class="offer-type">
-<div class="offer-icon">
-<svg fill="none" height="40" stroke="currentColor" stroke-width="1.2" viewbox="0 0 48 48" width="40">
-<rect height="28" rx="1.5" width="36" x="6" y="14"></rect>
-<path d="M3 14l21-8 21 8"></path>
-<rect height="6" rx="0.5" width="8" x="14" y="22"></rect>
-<rect height="6" rx="0.5" width="8" x="26" y="22"></rect>
-<rect height="8" rx="1" width="12" x="18" y="34"></rect>
-<line x1="6" x2="42" y1="30" y2="30"></line>
-</svg>
-</div>
-<h3 class="offer-type-name">Domy piętrowe</h3>
-<p class="offer-type-desc">Więcej przestrzeni na mniejszej działce. Oddzielna strefa dzienna i nocna dla większych rodzin.</p>
-</div>
-<div class="offer-type">
-<div class="offer-icon">
-<svg fill="none" height="40" stroke="currentColor" stroke-width="1.2" viewbox="0 0 48 48" width="40">
-<path d="M6 24l18-18 18 18"></path>
-<rect height="18" rx="1.5" width="28" x="10" y="24"></rect>
-<rect height="12" rx="1" width="12" x="18" y="30"></rect>
-<line x1="24" x2="24" y1="6" y2="12"></line>
-</svg>
-</div>
-<h3 class="offer-type-name">Domy z antresolą</h3>
-<p class="offer-type-desc">Otwarta przestrzeń z wysokim sufitem. Nowoczesna forma, popularna w stylu stodoła i loft.</p>
-</div>
-<div class="offer-type">
-<div class="offer-icon">
-<svg fill="none" height="40" stroke="currentColor" stroke-width="1.2" viewbox="0 0 48 48" width="40">
-<rect height="22" rx="1.5" width="18" x="4" y="20"></rect>
-<rect height="22" rx="1.5" width="18" x="26" y="20"></rect>
-<path d="M1 20l12-10 12 10"></path>
-<path d="M23 20l12-10 12 10"></path>
-<rect height="8" rx="0.5" width="6" x="10" y="28"></rect>
-<rect height="8" rx="0.5" width="6" x="32" y="28"></rect>
-</svg>
-</div>
-<h3 class="offer-type-name">Domy bliźniacze</h3>
-<p class="offer-type-desc">Dwa niezależne segmenty w jednej bryle. Ekonomiczne rozwiązanie dla dwóch rodzin lub inwestorów.</p>
-</div>
-<div class="offer-type">
-<div class="offer-icon">
-<svg fill="none" height="40" stroke="currentColor" stroke-width="1.2" viewbox="0 0 48 48" width="40">
-<rect height="16" rx="1.5" width="32" x="8" y="22"></rect>
-<path d="M5 22l19-12 19 12"></path>
-<rect height="10" rx="1" width="8" x="16" y="28"></rect>
-<rect height="6" rx="0.5" width="8" x="28" y="26"></rect>
-<circle cx="40" cy="12" r="5"></circle>
-<path d="M38 12l1.5 1.5 3-3"></path>
-</svg>
-</div>
-<h3 class="offer-type-name">Domy rekreacyjne</h3>
-<p class="offer-type-desc">Kompaktowe domy letniskowe i całoroczne. Szybka realizacja, wysoka jakość wykończenia.</p>
-</div>
-</div>
-<div class="offer-bottom">
-<div class="offer-process">
-<h3 class="offer-process-title">Jak to działa?</h3>
-<div class="offer-steps">
-<div class="offer-step">
-<span class="offer-step-num">01</span>
-<span class="offer-step-text">Dostarczasz projekt domu — z katalogu lub od architekta</span>
-</div>
-<div class="offer-step">
-<span class="offer-step-num">02</span>
-<span class="offer-step-text">Analizujemy i dostosowujemy do technologii szkieletowej</span>
-</div>
-<div class="offer-step">
-<span class="offer-step-num">03</span>
-<span class="offer-step-text">Produkujemy prefabrykowane elementy w naszej fabryce</span>
-</div>
-<div class="offer-step">
-<span class="offer-step-num">04</span>
-<span class="offer-step-text">Montujemy dom na Twojej działce — nawet w 90 dni</span>
-</div>
-</div>
-</div>
-</div>
+  <div>
+    <div class="section-label" data-i18n="models_label">Oferta</div>
+    <h2 class="section-title">Budujemy <em>każdy typ</em> domu</h2>
+    <p class="section-text" style="font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;">Realizujemy domy na podstawie projektów wybranych przez naszych klientów — zarówno z gotowych katalogów, jak i indywidualnych pracowni architektonicznych. Niezależnie od stylu i wielkości, każdy projekt dostosowujemy do technologii prefabrykowanej konstrukcji drewnianej.</p>
+  </div>
+
+  <div class="offer-types">
+    <div class="offer-type">
+      <div class="offer-icon">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="6" y="22" width="36" height="18" rx="1.5"/>
+          <path d="M3 22l21-13 21 13"/>
+          <rect x="18" y="30" width="12" height="10" rx="1"/>
+        </svg>
+      </div>
+      <h3 class="offer-type-name">Domy parterowe</h3>
+      <p class="offer-type-desc">Funkcjonalne układy na jednym poziomie. Idealne dla rodzin ceniących wygodę i bezprogowy komfort.</p>
+    </div>
+    <div class="offer-type">
+      <div class="offer-icon">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="6" y="14" width="36" height="28" rx="1.5"/>
+          <path d="M3 14l21-8 21 8"/>
+          <rect x="14" y="22" width="8" height="6" rx="0.5"/>
+          <rect x="26" y="22" width="8" height="6" rx="0.5"/>
+          <rect x="18" y="34" width="12" height="8" rx="1"/>
+          <line x1="6" y1="30" x2="42" y2="30"/>
+        </svg>
+      </div>
+      <h3 class="offer-type-name">Domy piętrowe</h3>
+      <p class="offer-type-desc">Więcej przestrzeni na mniejszej działce. Oddzielna strefa dzienna i nocna dla większych rodzin.</p>
+    </div>
+    <div class="offer-type">
+      <div class="offer-icon">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M6 24l18-18 18 18"/>
+          <rect x="10" y="24" width="28" height="18" rx="1.5"/>
+          <rect x="18" y="30" width="12" height="12" rx="1"/>
+          <line x1="24" y1="6" x2="24" y2="12"/>
+        </svg>
+      </div>
+      <h3 class="offer-type-name">Domy z antresolą</h3>
+      <p class="offer-type-desc">Otwarta przestrzeń z wysokim sufitem. Nowoczesna forma, popularna w stylu stodoła i loft.</p>
+    </div>
+    <div class="offer-type">
+      <div class="offer-icon">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="4" y="20" width="18" height="22" rx="1.5"/>
+          <rect x="26" y="20" width="18" height="22" rx="1.5"/>
+          <path d="M1 20l12-10 12 10"/>
+          <path d="M23 20l12-10 12 10"/>
+          <rect x="10" y="28" width="6" height="8" rx="0.5"/>
+          <rect x="32" y="28" width="6" height="8" rx="0.5"/>
+        </svg>
+      </div>
+      <h3 class="offer-type-name">Domy bliźniacze</h3>
+      <p class="offer-type-desc">Dwa niezależne segmenty w jednej bryle. Ekonomiczne rozwiązanie dla dwóch rodzin lub inwestorów.</p>
+    </div>
+    <div class="offer-type">
+      <div class="offer-icon">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="8" y="22" width="32" height="16" rx="1.5"/>
+          <path d="M5 22l19-12 19 12"/>
+          <rect x="16" y="28" width="8" height="10" rx="1"/>
+          <rect x="28" y="26" width="8" height="6" rx="0.5"/>
+          <circle cx="40" cy="12" r="5"/>
+          <path d="M38 12l1.5 1.5 3-3"/>
+        </svg>
+      </div>
+      <h3 class="offer-type-name">Domy rekreacyjne</h3>
+      <p class="offer-type-desc">Kompaktowe domy letniskowe i całoroczne. Szybka realizacja, wysoka jakość wykończenia.</p>
+    </div>
+  </div>
+
+  <div class="offer-bottom">
+    <div class="offer-process">
+      <h3 class="offer-process-title">Jak to działa?</h3>
+      <div class="offer-steps">
+        <div class="offer-step">
+          <span class="offer-step-num">01</span>
+          <span class="offer-step-text">Dostarczasz projekt domu — z katalogu lub od architekta</span>
+        </div>
+        <div class="offer-step">
+          <span class="offer-step-num">02</span>
+          <span class="offer-step-text">Analizujemy i dostosowujemy do technologii szkieletowej</span>
+        </div>
+        <div class="offer-step">
+          <span class="offer-step-num">03</span>
+          <span class="offer-step-text">Produkujemy prefabrykowane elementy w naszej fabryce</span>
+        </div>
+        <div class="offer-step">
+          <span class="offer-step-num">04</span>
+          <span class="offer-step-text">Montujemy dom na Twojej działce — nawet w 90 dni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
+
+
 <!-- ========== MAPA REALIZACJI ========== -->
 <section class="section" id="mapa-realizacji" style="padding-top:6rem;padding-bottom:6rem;">
-<div class="reach-split">
-<div class="reach-split-map reveal-up">
-<div class="reach-frame">
-<img alt="Mapa realizacji VIDAL w Europie" src="img/asset-014.jpg"/>
-<div class="reach-hotspot" data-country="polska" style="top:42%;left:56%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="niemcy" style="top:48%;left:43%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="anglia" style="top:42%;left:25%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="norwegia" style="top:18%;left:40%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="francja" style="top:55%;left:33%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="szwajcaria" style="top:56%;left:44%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="austria" style="top:52%;left:50%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-<div class="reach-hotspot" data-country="hiszpania" style="top:76%;left:25%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
-</div>
-</div>
-<div class="reach-split-info">
-<div class="section-label" data-i18n="map_label">Zasięg</div>
-<h2 class="section-title" data-i18n-html="map_title">Budujemy w całej <em>Europie</em></h2>
-<p class="reach-desc" data-i18n="map_desc">Nasze domy stoją w 8 krajach europejskich. Każdy projekt realizujemy z tą samą precyzją – niezależnie od lokalizacji.</p>
-<div class="reach-list stagger-group">
-<div class="reach-item reveal-scale-soft" data-country="polska"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_poland">Polska</span><span class="reach-tag">HQ</span></div>
-<div class="reach-item reveal-scale-soft" data-country="niemcy"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_germany">Niemcy</span></div>
-<div class="reach-item reveal-scale-soft" data-country="norwegia"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_norway">Norwegia</span></div>
-<div class="reach-item reveal-scale-soft" data-country="anglia"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_england">Anglia</span></div>
-<div class="reach-item reveal-scale-soft" data-country="szwajcaria"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_switzerland">Szwajcaria</span></div>
-<div class="reach-item reveal-scale-soft" data-country="austria"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_austria">Austria</span></div>
-<div class="reach-item reveal-scale-soft" data-country="francja"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_france">Francja</span></div>
-<div class="reach-item reveal-scale-soft" data-country="hiszpania"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_spain">Hiszpania</span></div>
-</div>
-</div>
-</div>
+  <div class="reach-split">
+
+    <div class="reach-split-map reveal-up">
+      <div class="reach-frame">
+        <img src="map.jpg" alt="Mapa realizacji VIDAL w Europie">
+        <div class="reach-hotspot" data-country="polska" style="top:42%;left:56%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="niemcy" style="top:48%;left:43%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="anglia" style="top:42%;left:25%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="norwegia" style="top:18%;left:40%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="francja" style="top:55%;left:33%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="szwajcaria" style="top:56%;left:44%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="austria" style="top:52%;left:50%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+        <div class="reach-hotspot" data-country="hiszpania" style="top:76%;left:25%;"><span class="reach-hotspot-ping"></span><span class="reach-hotspot-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="reach-split-info">
+      <div class="section-label" data-i18n="map_label">Zasięg</div>
+      <h2 class="section-title" data-i18n-html="map_title">Budujemy w całej <em>Europie</em></h2>
+      <p class="reach-desc" data-i18n="map_desc">Nasze domy stoją w 8 krajach europejskich. Każdy projekt realizujemy z tą samą precyzją – niezależnie od lokalizacji.</p>
+      <div class="reach-list stagger-group">
+        <div class="reach-item reveal-scale-soft" data-country="polska"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_poland">Polska</span><span class="reach-tag">HQ</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="niemcy"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_germany">Niemcy</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="norwegia"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_norway">Norwegia</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="anglia"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_england">Anglia</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="szwajcaria"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_switzerland">Szwajcaria</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="austria"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_austria">Austria</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="francja"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_france">Francja</span></div>
+        <div class="reach-item reveal-scale-soft" data-country="hiszpania"><span class="reach-dot"></span><span class="reach-name" data-i18n="map_spain">Hiszpania</span></div>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 <!-- ========== REALIZACJE ========== -->
 <!-- ========== REALIZACJE ========== -->
 <!-- ========== REALIZACJE ========== -->
 <section class="section" id="realizacje">
-<div>
-<div class="section-label" data-i18n="gallery_label">Portfolio</div>
-<h2 class="section-title" data-i18n-html="gallery_title">Nasze <em>realizacje</em></h2>
-<p class="section-text" data-i18n="gallery_desc">Ponad 300 domów zrealizowanych w Polsce i za granicą.</p>
-<button class="gallery-toggle" id="galleryToggle">
-<svg fill="none" height="18" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="18"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
-<span>Galeria realizacji</span>
-<svg class="gallery-toggle-arrow" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</button>
-</div>
-<div class="proj-grid stagger-group">
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Rezydencja Alpejska, Szwajcaria" loading="lazy" src="img/asset-015.jpg" style="object-position:center center;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Rezydencja Alpejska</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+  <div>
+    <div class="section-label" data-i18n="gallery_label">Portfolio</div>
+    <h2 class="section-title" data-i18n-html="gallery_title">Nasze <em>realizacje</em></h2>
+    <p class="section-text" data-i18n="gallery_desc">Ponad 300 domów zrealizowanych w Polsce i za granicą.</p>
+    <button class="gallery-toggle" id="galleryToggle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <span>Galeria realizacji</span>
+      <svg class="gallery-toggle-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </div>
+
+  <div class="proj-grid stagger-group">
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-01.jpg" alt="Rezydencja Alpejska, Szwajcaria" loading="lazy" style="object-position:center center;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Rezydencja Alpejska</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Szwajcaria
         </div>
-</div>
-</div>
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Rezydencja Nowoczesna, Polska" loading="lazy" src="img/asset-016.jpg" style="object-position:center center;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Rezydencja Nowoczesna</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+    </div>
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-02.jpg" alt="Rezydencja Nowoczesna, Polska" loading="lazy" style="object-position:center center;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Rezydencja Nowoczesna</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Polska
         </div>
-</div>
-</div>
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Willa Bianco-Rosso, Niemcy" loading="lazy" src="img/asset-017.jpg" style="object-position:center 25%;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Willa Bianco-Rosso</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+    </div>
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-03.jpg" alt="Willa Bianco-Rosso, Niemcy" loading="lazy" style="object-position:center 25%;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Willa Bianco-Rosso</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Niemcy
         </div>
-</div>
-</div>
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Dom z Pergolą, Poznań, Polska" loading="lazy" src="img/asset-018.jpg" style="object-position:center center;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Dom z Pergolą</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+    </div>
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-04.jpg" alt="Dom z Pergolą, Poznań, Polska" loading="lazy" style="object-position:center center;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Dom z Pergolą</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Poznań, Polska
         </div>
-</div>
-</div>
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Dom Tradycyjny, Norwegia" loading="lazy" src="img/asset-019.jpg" style="object-position:center 40%;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Dom Tradycyjny</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+    </div>
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-05.jpg" alt="Dom Tradycyjny, Norwegia" loading="lazy" style="object-position:center 40%;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Dom Tradycyjny</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Norwegia
         </div>
-</div>
-</div>
-<div class="proj-card reveal-scale-soft">
-<div class="proj-img">
-<img alt="Rezydencja Fiordowa, Norwegia" loading="lazy" src="img/asset-020.jpg" style="object-position:center 45%;"/>
-</div>
-<div class="proj-info">
-<div class="proj-name">Rezydencja Fiordowa</div>
-<div class="proj-loc">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </div>
+    </div>
+    <div class="proj-card reveal-scale-soft">
+      <div class="proj-img">
+        <img src="gallery-06.jpg" alt="Rezydencja Fiordowa, Norwegia" loading="lazy" style="object-position:center 45%;">
+      </div>
+      <div class="proj-info">
+        <div class="proj-name">Rezydencja Fiordowa</div>
+        <div class="proj-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Norwegia
         </div>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ========== FABRYKA ========== -->
 <section class="section" id="fabryka">
-<div class="factory-grid">
-<div>
-<div class="section-label" data-i18n="factory_label">Produkcja</div>
-<h2 class="section-title" data-i18n-html="factory_title">Nasza <em>fabryka</em></h2>
-<p class="section-text">
+  <div class="factory-grid">
+    <div>
+      <div class="section-label" data-i18n="factory_label">Produkcja</div>
+      <h2 class="section-title" data-i18n-html="factory_title">Nasza <em>fabryka</em></h2>
+      <p class="section-text">
         Domy powstają w naszej fabryce, gdzie produkowane są gotowe elementy ścian i konstrukcji. Pozwala to skrócić czas budowy i zwiększyć precyzję wykonania.
       </p>
-<div class="factory-features">
-<div class="factory-feature reveal-blur">
-<div class="factory-feature-icon">
-<svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-</div>
-<div class="factory-feature-text">
-<h4 data-i18n="factory_f1_title">Kontrolowane warunki</h4>
-<p data-i18n="factory_f1_desc">Produkcja w hali eliminuje wpływ pogody na jakość elementów.</p>
-</div>
-</div>
-<div class="factory-feature reveal-blur">
-<div class="factory-feature-icon">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-</div>
-<div class="factory-feature-text">
-<h4 data-i18n="factory_f2_title">Krótszy czas budowy</h4>
-<p data-i18n="factory_f2_desc">Prefabrykacja pozwala skrócić czas realizacji nawet o 50%.</p>
-</div>
-</div>
-<div class="factory-feature reveal-blur">
-<div class="factory-feature-icon">
-<svg viewbox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-</div>
-<div class="factory-feature-text">
-<h4 data-i18n="factory_f3_title">Wysoka precyzja</h4>
-<p data-i18n="factory_f3_desc">Każdy element jest wykonany z dokładnością do milimetra.</p>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div class="factory-image" style="aspect-ratio:auto;">
-<div class="factory-grid-photos stagger-group">
-<div class="factory-thumb factory-thumb-wide reveal-scale-soft">
-<img alt="Podnoszenie ściany OSB" src="img/asset-021.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Podnoszenie ściany OSB</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Montaż ramy ściennej" src="img/asset-022.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż ramy ściennej</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Szkielet ściany z otworami" src="img/asset-023.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Szkielet ściany z otworami</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Montaż płyt g-k" src="img/asset-024.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż płyt g-k</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Izolacja wełną mineralną" src="img/asset-025.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Izolacja wełną mineralną</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Montaż styropianu fasadowego" src="img/asset-026.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż styropianu fasadowego</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Gotowa ściana z izolacją" src="img/asset-027.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Gotowa ściana z izolacją</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Klejenie styropianu" src="img/asset-028.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Klejenie styropianu</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Ściana z płytą OSB" src="img/asset-029.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Ściana z płytą OSB</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Układanie wełny mineralnej" src="img/asset-030.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Układanie wełny mineralnej</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Pakowanie ściany do transportu" src="img/asset-031.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Pakowanie ściany do transportu</span>
-</div>
-</div>
-<div class="factory-thumb reveal-scale-soft">
-<img alt="Drewno konstrukcyjne" src="img/asset-032.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"/>
-<div class="factory-thumb-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;">
-<span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Drewno konstrukcyjne</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+      <div class="factory-features">
+        <div class="factory-feature reveal-blur">
+          <div class="factory-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="factory-feature-text">
+            <h4 data-i18n="factory_f1_title">Kontrolowane warunki</h4>
+            <p data-i18n="factory_f1_desc">Produkcja w hali eliminuje wpływ pogody na jakość elementów.</p>
+          </div>
+        </div>
+        <div class="factory-feature reveal-blur">
+          <div class="factory-feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="factory-feature-text">
+            <h4 data-i18n="factory_f2_title">Krótszy czas budowy</h4>
+            <p data-i18n="factory_f2_desc">Prefabrykacja pozwala skrócić czas realizacji nawet o 50%.</p>
+          </div>
+        </div>
+        <div class="factory-feature reveal-blur">
+          <div class="factory-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="factory-feature-text">
+            <h4 data-i18n="factory_f3_title">Wysoka precyzja</h4>
+            <p data-i18n="factory_f3_desc">Każdy element jest wykonany z dokładnością do milimetra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="factory-image" style="aspect-ratio:auto;">
+      <div class="factory-grid-photos stagger-group">
+      <div class="factory-thumb factory-thumb-wide reveal-scale-soft">
+        <img src="factory-01.jpg" alt="Podnoszenie ściany OSB" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Podnoszenie ściany OSB</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-02.jpg" alt="Montaż ramy ściennej" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż ramy ściennej</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-03.jpg" alt="Szkielet ściany z otworami" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Szkielet ściany z otworami</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-04.jpg" alt="Montaż płyt g-k" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż płyt g-k</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-05.jpg" alt="Izolacja wełną mineralną" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Izolacja wełną mineralną</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-06.jpg" alt="Montaż styropianu fasadowego" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż styropianu fasadowego</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-07.jpg" alt="Gotowa ściana z izolacją" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Gotowa ściana z izolacją</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-08.jpg" alt="Klejenie styropianu" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Klejenie styropianu</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-09.jpg" alt="Ściana z płytą OSB" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Ściana z płytą OSB</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-10.jpg" alt="Układanie wełny mineralnej" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Układanie wełny mineralnej</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-11.jpg" alt="Pakowanie ściany do transportu" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Pakowanie ściany do transportu</span>
+        </div>
+      </div>
+      <div class="factory-thumb reveal-scale-soft">
+        <img src="factory-12.jpg" alt="Drewno konstrukcyjne" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Drewno konstrukcyjne</span>
+        </div>
+      </div>
+    </div>
+    </div>
+      
+    </div>
+    </div>
+  </div>
 </section>
+
 <!-- ========== KONTAKT ========== -->
 <section class="section contact" id="kontakt">
-<div>
-<div class="section-label">Kontakt</div>
-<h2 class="section-title" data-i18n-html="contact_title">Porozmawiajmy o Twoim <em>domu</em></h2>
-<p class="section-text" data-i18n="contact_desc">Skontaktuj się z nami – doradzimy i pomożemy wybrać najlepsze rozwiązanie.</p>
-</div>
-<div class="contact-grid">
-<div>
-<div class="contact-info">
-<div class="contact-item reveal-left">
-<div class="contact-item-icon">
-<svg viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-</div>
-<div>
-<div class="contact-item-label" data-i18n="contact_address">Adres</div>
-<div class="contact-item-value">61-655 Poznań<br/>Polska</div>
-</div>
-</div>
-<div class="contact-item reveal-left">
-<div class="contact-item-icon">
-<svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-</div>
-<div>
-<div class="contact-item-label" data-i18n="contact_phone">Telefon</div>
-<div class="contact-item-value"><a href="tel:+48503787528">+48 503 787 528</a><br/><a href="tel:+48501634705">+48 501 634 705</a></div>
-</div>
-</div>
-<div class="contact-item reveal-left">
-<div class="contact-item-icon">
-<svg viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-</div>
-<div>
-<div class="contact-item-label" data-i18n="contact_email">Email</div>
-<div class="contact-item-value"><a href="mailto:vidal.ajtner@gmail.com">vidal.ajtner@gmail.com</a></div>
-</div>
-</div>
-</div>
-<div class="contact-map">
-<!-- TUTAJ: iframe z Google Maps lub mapa statyczna -->
+  <div>
+    <div class="section-label" data-i18n="contact_label">Kontakt</div>
+    <h2 class="section-title" data-i18n-html="contact_title">Porozmawiajmy o Twoim <em>domu</em></h2>
+    <p class="section-text" data-i18n="contact_desc">Skontaktuj się z nami – doradzimy i pomożemy wybrać najlepsze rozwiązanie.</p>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info">
+        <div class="contact-item reveal-left">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_address">Adres</div>
+            <div class="contact-item-value">61-655 Poznań<br>Polska</div>
+          </div>
+        </div>
+        <div class="contact-item reveal-left">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_phone">Telefon</div>
+            <div class="contact-item-value"><a href="tel:+48503787528">+48 503 787 528</a><br><a href="tel:+48501634705">+48 501 634 705</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal-left">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_email">Email</div>
+            <div class="contact-item-value"><a href="mailto:vidal.ajtner@gmail.com">vidal.ajtner@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <!-- TUTAJ: iframe z Google Maps lub mapa statyczna -->
         Mapa lokalizacji – Poznań
       </div>
-</div>
-<div>
-<div class="contact-form reveal-up-scale">
-<div class="form-row">
-<div class="form-group">
-<input placeholder="Imię i nazwisko" required="" type="text"/>
-</div>
-<div class="form-group">
-<input placeholder="Telefon" type="tel"/>
-</div>
-</div>
-<div class="form-group">
-<input placeholder="Adres email" required="" type="email"/>
-</div>
-<div class="form-group">
-<input placeholder="Temat" type="text"/>
-</div>
-<div class="form-group">
-<textarea placeholder="Twoja wiadomość..." required=""></textarea>
-</div>
-<div class="form-submit">
-<button class="btn-primary" data-i18n="contact_submit" onclick="handleFormSubmit()" type="button">Wyślij wiadomość</button>
-</div>
-</div>
-</div>
-</div>
+    </div>
+    <div>
+      <div class="contact-form reveal-up-scale">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" placeholder="Imię i nazwisko" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Telefon">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Adres email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Temat">
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Twoja wiadomość..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="button" class="btn-primary" onclick="handleFormSubmit()" data-i18n="contact_submit">Wyślij wiadomość</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
-<div class="footer-grid reveal-scale-soft">
-<div class="footer-brand">
-<div class="footer-logo">VIDAL<span>.</span></div>
-<p class="footer-tagline" data-i18n="footer_tagline">Projektujemy i budujemy prefabrykowane domy szkieletowe od 1988 roku. Ponad 35 lat doświadczenia, ponad 300 zrealizowanych domów.</p>
-</div>
-<div>
-<h4 class="footer-heading" data-i18n="footer_nav">Nawigacja</h4>
-<div class="footer-links">
-<a data-i18n="nav_about" href="#o-nas">O nas</a>
-<a data-i18n="footer_models" href="#modele">Modele domów</a>
-<a data-i18n="nav_tech" href="#technologia">Technologia</a>
-<a data-i18n="nav_realizations" href="#realizacje">Realizacje</a>
-<a data-i18n="nav_factory" href="#fabryka">Fabryka</a>
-<a data-i18n="nav_contact" href="#kontakt">Kontakt</a>
-</div>
-</div>
-<div>
-<h4 class="footer-heading">Kontakt</h4>
-<div class="footer-links">
-<a href="tel:+48503787528">+48 503 787 528</a><br/><a href="tel:+48501634705">+48 501 634 705</a>
-<a href="mailto:vidal.ajtner@gmail.com" style="color:var(--gold);">vidal.ajtner@gmail.com</a>
-<span style="color: var(--text-secondary); font-size:0.9rem;">61-655 Poznań<br/>Polska</span>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<span class="footer-copy">© 2025 VIDAL. Wszelkie prawa zastrzeżone.</span>
-<div class="footer-legal">
-<a data-i18n="footer_privacy" href="#">Polityka prywatności</a>
-<a data-i18n="footer_terms" href="#">Regulamin</a>
-</div>
-</div>
+  <div class="footer-grid reveal-scale-soft">
+    <div class="footer-brand">
+      <div class="footer-logo">VIDAL<span>.</span></div>
+      <p class="footer-tagline" data-i18n="footer_tagline">Projektujemy i budujemy prefabrykowane domy szkieletowe od 1988 roku. Ponad 35 lat doświadczenia, ponad 300 zrealizowanych domów.</p>
+    </div>
+    <div>
+      <h4 class="footer-heading" data-i18n="footer_nav">Nawigacja</h4>
+      <div class="footer-links">
+        <a href="#o-nas" data-i18n="nav_about">O nas</a>
+        <a href="#modele" data-i18n="footer_models">Modele domów</a>
+        <a href="#technologia" data-i18n="nav_tech">Technologia</a>
+        <a href="#realizacje" data-i18n="nav_realizations">Realizacje</a>
+        <a href="#fabryka" data-i18n="nav_factory">Fabryka</a>
+        <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-heading">Kontakt</h4>
+      <div class="footer-links">
+        <a href="tel:+48503787528">+48 503 787 528</a><br><a href="tel:+48501634705">+48 501 634 705</a>
+        <a href="mailto:vidal.ajtner@gmail.com" style="color:var(--gold);">vidal.ajtner@gmail.com</a>
+        <span style="color: var(--text-secondary); font-size:0.9rem;">61-655 Poznań<br>Polska</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 VIDAL. Wszelkie prawa zastrzeżone.</span>
+    <div class="footer-legal">
+      <a href="#" data-i18n="footer_privacy">Polityka prywatności</a>
+      <a href="#" data-i18n="footer_terms">Regulamin</a>
+    </div>
+  </div>
 </footer>
+
 <!-- ========== JAVASCRIPT ========== -->
+
+
+
 <!-- Model 112 Detail Modal -->
+
+
+
 <div class="cert-lightbox" id="certLightbox">
-<div class="cert-lb-bg" onclick="closeCertLB()"></div>
-<div class="cert-lb-content">
-<button class="cert-lb-close" onclick="closeCertLB()">×</button>
-<img alt="Certyfikat" id="certLBImg" src=""/>
+  <div class="cert-lb-bg" onclick="closeCertLB()"></div>
+  <div class="cert-lb-content">
+    <button class="cert-lb-close" onclick="closeCertLB()">&times;</button>
+    <img id="certLBImg" src="" alt="Certyfikat">
+  </div>
 </div>
-</div>
+
+
 <!-- GSAP + ScrollTrigger -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+<script src="script.js"></script>
 
-<script src="script.js"></script></body>
+
+
+<script src="gsap-animations.js"></script>
+<script src="counter-backup.js"></script>
+
+</body>
 </html>
