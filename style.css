@@ -51,6 +51,15 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
+::selection {
+  background: rgba(200,164,92,0.3);
+  color: var(--text-primary);
+}
+::-moz-selection {
+  background: rgba(200,164,92,0.3);
+  color: var(--text-primary);
+}
+
 
 /* ============================================
    NAVIGATION
@@ -591,11 +600,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
   color: var(--text-primary);
+  transition: color 0.4s var(--apple-ease);
+}
+.process-step:hover .process-step-title {
+  color: var(--gold-light);
 }
 .process-step-desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .process-step-icon {
   width: 50px;
@@ -641,12 +654,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   padding: 0.9rem 1.2rem;
   border-left: 3px solid var(--gold-muted);
-  transition: all 0.3s ease;
+  transition: all 0.4s var(--apple-ease);
   cursor: default;
+  border-radius: 0 4px 4px 0;
 }
 .wall-layer:hover {
   background: var(--gold-muted);
   border-left-color: var(--gold);
+  padding-left: 1.5rem;
 }
 .wall-layer-thickness {
   font-family: var(--font-accent);
@@ -954,9 +969,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .contact-map {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .contact-map iframe {
   display: block;
@@ -1115,7 +1131,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.lightbox-close:hover { color: var(--gold); }
+.lightbox-close:hover { color: var(--gold); transform: scale(1.1); }
+.lightbox-close { transition: color 0.3s ease, transform 0.3s var(--apple-ease-out); }
 .lightbox-content {
   max-width: 90vw;
   max-height: 85vh;
@@ -1250,7 +1267,8 @@ body::after {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 @media (max-width: 900px) {
   .wall-panel { flex-direction: column; }
@@ -1328,7 +1346,13 @@ body::after {
   padding: 1.5rem 2rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: 8px;
   flex: 1;
+  transition: border-color 0.4s var(--apple-ease), transform 0.4s var(--apple-ease-out);
+}
+.kvh-stat-item:hover {
+  border-color: rgba(200,164,92,0.2);
+  transform: translateY(-2px);
 }
 .kvh-stat-number {
   font-family: var(--font-accent);
@@ -1944,9 +1968,13 @@ body::after {
 .reach-frame {
   position: relative;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  transition: box-shadow 0.5s var(--apple-ease);
+}
+.reach-frame:hover {
+  box-shadow: 0 16px 50px rgba(0,0,0,0.3);
 }
 .reach-frame img {
   width: 100%;
@@ -2098,9 +2126,9 @@ body::after {
   margin: 0 -0.5rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.25s ease;
+  transition: background 0.35s var(--apple-ease), transform 0.35s var(--apple-ease-out);
 }
-.cert-preview:hover { background: rgba(200,164,92,0.06); }
+.cert-preview:hover { background: rgba(200,164,92,0.06); transform: translateX(3px); }
 .cert-preview + .cert-preview { margin-top: 0.15rem; }
 .cert-thumb {
   width: 48px;
