@@ -153,18 +153,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Gallery cards: staggered zoom ---
   gsap.utils.toArray('.proj-card').forEach(function(el, i) {
     gsap.fromTo(el,
-      { y: 50, scale: 0.9, opacity: 0 },
+      { y: 60, scale: 0.92, opacity: 0, filter: 'blur(3px)' },
       {
         y: 0,
         scale: 1,
         opacity: 1,
-        duration: 1,
-        ease: 'power2.out',
+        filter: 'blur(0px)',
+        duration: 1.2,
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
           start: 'top 92%',
-          end: 'top 60%',
-          scrub: 0.6,
+          end: 'top 58%',
+          scrub: 0.8,
         }
       }
     );
@@ -173,17 +174,38 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Contact items: slide from left ---
   gsap.utils.toArray('.contact-item').forEach(function(el, i) {
     gsap.fromTo(el,
-      { x: -30, opacity: 0 },
+      { x: -35, opacity: 0, filter: 'blur(2px)' },
       {
         x: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: 'power2.out',
+        filter: 'blur(0px)',
+        duration: 1,
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
           start: 'top 88%',
           end: 'top 65%',
-          scrub: 0.5,
+          scrub: 0.6,
+        }
+      }
+    );
+  });
+
+  // --- Testimonial cards: staggered rise ---
+  gsap.utils.toArray('.testimonial-card').forEach(function(el, i) {
+    gsap.fromTo(el,
+      { y: 40, opacity: 0, scale: 0.95 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 90%',
+          end: 'top 60%',
+          scrub: 0.7,
         }
       }
     );
