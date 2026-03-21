@@ -365,9 +365,9 @@ document.addEventListener('keydown', function(e) {
 
 // --- CERT LIGHTBOX ---
 var certImages = [
-  "cert-mpa-full.jpg",
-  "cert-cochran-full.jpg",
-  "cert-wood-full.jpg"
+  "img/asset-034.jpg",
+  "img/asset-035.jpg",
+  "img/asset-036.jpg"
 ];
 function openCertLB(idx) {
   document.getElementById('certLBImg').src = certImages[idx];
