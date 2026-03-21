@@ -35,20 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // --- Image zoom-in from scale(0.85) ---
+  // --- Image zoom-in from scale(0.88) ---
   gsap.utils.toArray('.about-image img, .proj-img img, .reach-frame').forEach(function(el) {
-    gsap.fromTo(el, 
-      { scale: 0.85, opacity: 0.15 },
+    gsap.fromTo(el,
+      { scale: 0.88, opacity: 0.1 },
       {
         scale: 1,
         opacity: 1,
-        duration: 1,
-        ease: 'power2.out',
+        duration: 1.2,
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 90%',
-          end: 'center 55%',
-          scrub: 0.8,
+          start: 'top 88%',
+          end: 'center 50%',
+          scrub: 1,
         }
       }
     );
@@ -57,18 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Feature cards: rise + scale ---
   gsap.utils.toArray('.offer-type, .kvh-feature, .process-step').forEach(function(el, i) {
     gsap.fromTo(el,
-      { y: 40, scale: 0.92, opacity: 0 },
+      { y: 50, scale: 0.94, opacity: 0 },
       {
         y: 0,
         scale: 1,
         opacity: 1,
-        duration: 1,
+        duration: 1.2,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%',
+          start: 'top 90%',
           end: 'top 55%',
-          scrub: 0.6,
+          scrub: 0.8,
         }
       }
     );
@@ -97,17 +97,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Section titles: soft fade up ---
   gsap.utils.toArray('.section-title, .section-label').forEach(function(el) {
     gsap.fromTo(el,
-      { y: 20, opacity: 0 },
+      { y: 25, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
-        ease: 'power2.out',
+        duration: 1.1,
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 90%',
-          end: 'top 70%',
-          scrub: 0.5,
+          start: 'top 92%',
+          end: 'top 68%',
+          scrub: 0.6,
         }
       }
     );
