@@ -81,6 +81,7 @@ const i18n = {
     hero_title: 'Dom<br><em>z duszy</em><br>drewna',
     hero_desc: "Projektujemy i budujemy prefabrykowane domy szkieletowe – precyzyjnie, szybko i na pokolenia.",
     btn_models: "Poznaj modele", btn_consult: "Bezpłatna konsultacja",
+    hero_trust: "Zaufali nam klienci z 8 krajów Europy",
     stat_years: "Lat doświadczenia", stat_homes: "Zrealizowanych domów", stat_days: "Dni – czas realizacji",
     about_label: "O firmie",
     about_title: 'Budujemy domy<br><em>od ponad 35 lat</em>',
@@ -106,6 +107,17 @@ const i18n = {
     gallery_label: "Portfolio",
     gallery_title: 'Nasze <em>realizacje</em>',
     gallery_desc: "Ponad 300 domów zrealizowanych w Polsce i za granicą.",
+    testimonials_label: "Opinie",
+    testimonials_title: 'Co mówią nasi <em>klienci</em>',
+    testimonial_1_text: "Dom postawiony w 3 miesiące — od fundamentu do odbioru kluczy. Jakość wykonania przekroczyła nasze oczekiwania. Profesjonalizm na każdym etapie.",
+    testimonial_1_name: "Marek i Anna Kowalscy",
+    testimonial_1_loc: "Poznań, Polska",
+    testimonial_2_text: "Wybraliśmy VIDAL do budowy domu letniskowego w Szwajcarii. Jakość konstrukcji drewnianej jest doskonała. Wszystko dostarczone na czas.",
+    testimonial_2_name: "Thomas und Petra Weber",
+    testimonial_2_loc: "Zürich, Szwajcaria",
+    testimonial_3_text: "Fantastyczna jakość prosto z fabryki w Polsce. Dom zmontowany w niecałe dwa tygodnie. Polecamy VIDAL każdemu, kto szuka solidnego domu drewnianego.",
+    testimonial_3_name: "Erik og Ingrid Larsen",
+    testimonial_3_loc: "Bergen, Norwegia",
     factory_label: "Produkcja",
     factory_title: 'Nasza <em>fabryka</em>',
     factory_desc: "Domy powstają w naszej fabryce, gdzie produkowane są gotowe elementy ścian i konstrukcji. Pozwala to skrócić czas budowy i zwiększyć precyzję wykonania.",
@@ -149,6 +161,7 @@ const i18n = {
     hero_title: 'Home<br><em>from the soul</em><br>of wood',
     hero_desc: "We design and build prefabricated timber frame houses – precisely, quickly, and for generations.",
     btn_models: "Discover models", btn_consult: "Free consultation",
+    hero_trust: "Trusted by clients from 8 European countries",
     stat_years: "Years of experience", stat_homes: "Houses completed", stat_days: "Days – construction time",
     about_label: "About us",
     about_title: 'Building homes<br><em>for over 35 years</em>',
@@ -174,6 +187,17 @@ const i18n = {
     gallery_label: "Portfolio",
     gallery_title: 'Our <em>projects</em>',
     gallery_desc: "Over 300 houses built in Poland and abroad.",
+    testimonials_label: "Testimonials",
+    testimonials_title: 'What our <em>clients</em> say',
+    testimonial_1_text: "House built in 3 months — from foundation to key handover. The quality of workmanship exceeded our expectations. Professionalism at every stage.",
+    testimonial_1_name: "Marek & Anna Kowalski",
+    testimonial_1_loc: "Poznań, Poland",
+    testimonial_2_text: "We chose VIDAL for our holiday home in Switzerland. The quality of the timber construction is outstanding. Everything was delivered on time.",
+    testimonial_2_name: "Thomas & Petra Weber",
+    testimonial_2_loc: "Zürich, Switzerland",
+    testimonial_3_text: "Fantastic quality straight from the factory in Poland. The house was assembled in under two weeks. We recommend VIDAL to anyone looking for a solid timber home.",
+    testimonial_3_name: "Erik & Ingrid Larsen",
+    testimonial_3_loc: "Bergen, Norway",
     factory_label: "Production",
     factory_title: 'Our <em>factory</em>',
     factory_desc: "Our houses are built in our factory, where complete wall and structural elements are produced. This shortens construction time and increases precision.",
@@ -217,6 +241,7 @@ const i18n = {
     hero_title: 'Haus<br><em>aus der Seele</em><br>des Holzes',
     hero_desc: "Wir entwerfen und bauen vorgefertigte Holzrahmenhäuser – präzise, schnell und für Generationen.",
     btn_models: "Modelle entdecken", btn_consult: "Kostenlose Beratung",
+    hero_trust: "Vertrauen von Kunden aus 8 europäischen Ländern",
     stat_years: "Jahre Erfahrung", stat_homes: "Gebaute Häuser", stat_days: "Tage – Bauzeit",
     about_label: "Über uns",
     about_title: 'Wir bauen Häuser<br><em>seit über 35 Jahren</em>',
@@ -242,6 +267,17 @@ const i18n = {
     gallery_label: "Portfolio",
     gallery_title: 'Unsere <em>Projekte</em>',
     gallery_desc: "Über 300 gebaute Häuser in Polen und im Ausland.",
+    testimonials_label: "Bewertungen",
+    testimonials_title: 'Was unsere <em>Kunden</em> sagen',
+    testimonial_1_text: "Haus in 3 Monaten gebaut — vom Fundament bis zur Schlüsselübergabe. Die Qualität der Ausführung hat unsere Erwartungen übertroffen. Professionalität in jeder Phase.",
+    testimonial_1_name: "Marek & Anna Kowalski",
+    testimonial_1_loc: "Poznań, Polen",
+    testimonial_2_text: "Wir haben VIDAL für unser Ferienhaus in der Schweiz gewählt. Die Qualität der Holzkonstruktion ist hervorragend. Alles wurde termingerecht geliefert.",
+    testimonial_2_name: "Thomas & Petra Weber",
+    testimonial_2_loc: "Zürich, Schweiz",
+    testimonial_3_text: "Fantastische Qualität direkt aus der Fabrik in Polen. Das Haus wurde in weniger als zwei Wochen montiert. Wir empfehlen VIDAL jedem, der ein solides Holzhaus sucht.",
+    testimonial_3_name: "Erik & Ingrid Larsen",
+    testimonial_3_loc: "Bergen, Norwegen",
     factory_label: "Produktion",
     factory_title: 'Unsere <em>Fabrik</em>',
     factory_desc: "Unsere Häuser entstehen in unserer Fabrik, wo fertige Wand- und Konstruktionselemente produziert werden. Das verkürzt die Bauzeit und erhöht die Präzision.",
@@ -354,22 +390,10 @@ var galleryToggle = document.getElementById('galleryToggle');
 var projGrid = document.querySelector('.proj-grid');
 if (galleryToggle && projGrid) {
   galleryToggle.addEventListener('click', function() {
-    projGrid.classList.toggle('open');
+    projGrid.classList.toggle('closed');
     galleryToggle.classList.toggle('active');
   });
 }
-
-// Also open gallery when clicking REALIZACJE nav link
-document.querySelectorAll('a[href="#realizacje"]').forEach(function(link) {
-  link.addEventListener('click', function() {
-    setTimeout(function() {
-      if (projGrid && !projGrid.classList.contains('open')) {
-        projGrid.classList.add('open');
-        galleryToggle.classList.add('active');
-      }
-    }, 500);
-  });
-});
 
 // =============================================
 // MOTION ENGINE (IIFE)
