@@ -191,26 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
     );
   });
 
-  // --- Testimonial cards: staggered rise ---
-  gsap.utils.toArray('.testimonial-card').forEach(function(el, i) {
-    gsap.fromTo(el,
-      { y: 40, opacity: 0, scale: 0.95 },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 1.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 90%',
-          end: 'top 60%',
-          scrub: 0.7,
-        }
-      }
-    );
-  });
-
   // --- Hero parallax (continuous, not scrub) ---
   gsap.to('.hero-bg', {
     yPercent: 15,

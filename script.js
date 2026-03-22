@@ -389,9 +389,25 @@ document.querySelectorAll('.cert-preview[data-cert]').forEach(function(el) {
 var galleryToggle = document.getElementById('galleryToggle');
 var projGrid = document.querySelector('.proj-grid');
 if (galleryToggle && projGrid) {
+  var labelSpan = galleryToggle.querySelector('span');
   galleryToggle.addEventListener('click', function() {
+    var isExpanding = projGrid.classList.contains('closed');
     projGrid.classList.toggle('closed');
     galleryToggle.classList.toggle('active');
+    // Update button text
+    if (labelSpan) {
+      labelSpan.textContent = isExpanding
+        ? (labelSpan.getAttribute('data-label-less') || 'Zwiń')
+        : (labelSpan.getAttribute('data-label-more') || 'Zobacz więcej realizacji');
+    }
+    // GSAP animation for revealed cards
+    if (isExpanding && typeof gsap !== 'undefined') {
+      var cards = projGrid.querySelectorAll('.proj-card');
+      gsap.fromTo(cards,
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.08 }
+      );
+    }
   });
 }
 
