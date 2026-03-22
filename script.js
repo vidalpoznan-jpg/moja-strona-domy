@@ -397,8 +397,8 @@ var projGrid = document.querySelector('.proj-grid');
 if (galleryToggle && projGrid) {
   var labelSpan = galleryToggle.querySelector('span');
   galleryToggle.addEventListener('click', function() {
-    var isExpanding = projGrid.classList.contains('closed');
-    projGrid.classList.toggle('closed');
+    var isExpanding = !projGrid.classList.contains('expanded');
+    projGrid.classList.toggle('expanded');
     galleryToggle.classList.toggle('active');
     // Update button text
     if (labelSpan) {
@@ -408,8 +408,8 @@ if (galleryToggle && projGrid) {
     }
     // GSAP animation for revealed cards
     if (isExpanding && typeof gsap !== 'undefined') {
-      var cards = projGrid.querySelectorAll('.proj-card');
-      gsap.fromTo(cards,
+      var hiddenCards = projGrid.querySelectorAll('.proj-card:nth-child(n+7)');
+      gsap.fromTo(hiddenCards,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.08 }
       );

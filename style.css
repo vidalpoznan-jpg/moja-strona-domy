@@ -2364,18 +2364,12 @@ body::after {
   color: var(--text-secondary) !important;
 }
 
-/* Realizacje — visible by default, toggle hides */
-.proj-grid {
-  max-height: 3000px;
-  overflow: hidden;
-  opacity: 1;
-  transition: max-height 0.6s var(--ease-out), opacity 0.5s var(--ease-out), margin 0.4s var(--ease-out);
-  margin-top: 3rem !important;
+/* Realizacje — show first 6 cards, hide rest until expanded */
+.proj-grid .proj-card:nth-child(n+7) {
+  display: none;
 }
-.proj-grid.closed {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0 !important;
+.proj-grid.expanded .proj-card:nth-child(n+7) {
+  display: block;
 }
 
 /* Gallery toggle button */
