@@ -36,8 +36,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 
 // --- FORM SUBMIT ---
 function handleFormSubmit() {
-  var inputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+  var form = document.querySelector('.contact-form');
+  var inputs = form.querySelectorAll('input, textarea');
+  var btn = form.querySelector('button');
   var filled = true;
+
   inputs.forEach(function(input) {
     if (input.required && !input.value.trim()) {
       input.style.borderColor = '#c0392b';
@@ -45,15 +48,48 @@ function handleFormSubmit() {
       setTimeout(function() { input.style.borderColor = ''; }, 2000);
     }
   });
-  if (filled) {
-    var msg = 'Dziękujemy! Wiadomość została wysłana. Skontaktujemy się wkrótce.';
-    if (typeof currentLang !== 'undefined') {
-      if (currentLang === 'en') msg = 'Thank you! Your message has been sent.';
-      if (currentLang === 'de') msg = 'Vielen Dank! Ihre Nachricht wurde gesendet.';
+
+  if (!filled) return;
+
+  var data = {};
+  inputs.forEach(function(input) {
+    if (input.name) data[input.name] = input.value.trim();
+  });
+
+  btn.disabled = true;
+  btn.textContent = 'Wysyłanie...';
+
+  fetch('send-mail.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(result) {
+    if (result.success) {
+      var msg = 'Dziękujemy za wiadomość. Odpowiemy najszybciej jak to możliwe.';
+      if (typeof currentLang !== 'undefined') {
+        if (currentLang === 'en') msg = 'Thank you for your message. We will reply as soon as possible.';
+        if (currentLang === 'de') msg = 'Vielen Dank für Ihre Nachricht. Wir antworten so schnell wie möglich.';
+      }
+      alert(msg);
+      inputs.forEach(function(input) { input.value = ''; });
+    } else {
+      alert(result.message || 'Wystąpił błąd. Spróbuj ponownie.');
     }
-    alert(msg);
-    inputs.forEach(function(input) { input.value = ''; });
-  }
+  })
+  .catch(function() {
+    alert('Błąd połączenia. Sprawdź internet i spróbuj ponownie.');
+  })
+  .finally(function() {
+    btn.disabled = false;
+    var btnText = 'Wyślij wiadomość';
+    if (typeof currentLang !== 'undefined') {
+      if (currentLang === 'en') btnText = 'Send message';
+      if (currentLang === 'de') btnText = 'Nachricht senden';
+    }
+    btn.textContent = btnText;
+  });
 }
 
 // --- WALL TABS ---
