@@ -31,7 +31,7 @@
     <li><a href="#technologia" data-i18n="nav_tech">Technologia</a></li>
     <li><a href="#realizacje" data-i18n="nav_realizations">Realizacje</a></li>
     <li><a href="#fabryka" data-i18n="nav_factory">Fabryka</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="#kontakt" data-i18n="nav_contact">Kontakt</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -175,16 +175,16 @@
   <div>
       <div class="section-label" data-i18n="tech_label">Technologia</div>
       <h2 class="section-title" data-i18n-html="tech_title">Przekrój <em>ściany zewnętrznej</em></h2>
-      <p class="section-text">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
+      <p class="section-text" data-i18n="tech_desc">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
     </div>
 
     <div class="wall-tabs" style="display:flex;gap:0.8rem;margin-top:3rem;flex-wrap:wrap;">
       <button class="wall-tab active" id="wall-tab-0">
-        <span class="wall-tab-u">Wewnętrzna</span>
+        <span class="wall-tab-u" data-i18n="wall_tab_u_1">Wewnętrzna</span>
         <span class="wall-tab-label" data-i18n="wall_tab_1">Ściana wewnętrzna</span>
       </button>
       <button class="wall-tab" id="wall-tab-1">
-        <span class="wall-tab-u">Drewniana</span>
+        <span class="wall-tab-u" data-i18n="wall_tab_u_2">Drewniana</span>
         <span class="wall-tab-label" data-i18n="wall_tab_2">Elewacja drewniana</span>
       </button>
       <button class="wall-tab" id="wall-tab-2">
@@ -204,42 +204,42 @@
         </div>
         <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
           <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-          <div class="tech-u-value-number">Ściana wewnętrzna</div>
-          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Izolacja akustyczna</div>
+          <div class="tech-u-value-number" data-i18n="wall0_title">Ściana wewnętrzna</div>
+          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;" data-i18n="wall0_subtitle">Izolacja akustyczna</div>
           </div>
           <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna akustyczna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall0_l1">Płyta kartonowo-gipsowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall0_l2">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall0_l3">Wełna akustyczna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall0_l4">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall0_l5">Płyta gipsowo-kartonowa</span></div>
           </div>
             <div class="cert-tech">
-              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
               <div class="cert-preview" data-cert="0">
                 <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
                 <div class="cert-pv-info">
-                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="1">
                 <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="2">
                 <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
                 </div>
               </div>
             </div>
 
-            
+
         </div>
       </div>
 
@@ -249,47 +249,47 @@
         </div>
         <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
           <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-          <div class="tech-u-value-number" style="font-size:1.4rem;">Elewacja drewniana</div>
-          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;">Fasada wentylowana</div>
+          <div class="tech-u-value-number" style="font-size:1.4rem;" data-i18n="wall1_title">Elewacja drewniana</div>
+          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;" data-i18n="wall1_subtitle">Fasada wentylowana</div>
           </div>
           <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">26 mm</span><span class="wall-layer-name">Elewacja drewniana</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">30 mm</span><span class="wall-layer-name">Szczelina wentylacyjna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name">Membrana wiatroizolacja</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna w konstrukcji</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacyjna)</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta kartonowo-gipsowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">26 mm</span><span class="wall-layer-name" data-i18n="wall1_l1">Elewacja drewniana</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">30 mm</span><span class="wall-layer-name" data-i18n="wall1_l2">Szczelina wentylacyjna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name" data-i18n="wall1_l3">Membrana wiatroizolacja</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall1_l4">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall1_l5">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall1_l6">Wełna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name" data-i18n="wall1_l7">Folia PE (paroizolacyjna)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name" data-i18n="wall1_l8">Ruszt instalacyjny + wełna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall1_l9">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall1_l10">Płyta kartonowo-gipsowa</span></div>
           </div>
             <div class="cert-tech">
-              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
               <div class="cert-preview" data-cert="0">
                 <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
                 <div class="cert-pv-info">
-                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="1">
                 <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="2">
                 <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
                 </div>
               </div>
             </div>
 
-            
+
         </div>
       </div>
 
@@ -304,41 +304,41 @@
             <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
           </div>
           <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">150 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name">Ruszt instalacyjny + wełna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name" data-i18n="wall2_l1">Tynk akrylowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">150 mm</span><span class="wall-layer-name" data-i18n="wall2_l2">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall2_l3">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall2_l4">Wełna mineralna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name" data-i18n="wall2_l5">Folia PE (paroizolacja)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">50 mm</span><span class="wall-layer-name" data-i18n="wall2_l6">Ruszt instalacyjny + wełna</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall2_l7">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall2_l8">Płyta gipsowo-kartonowa</span></div>
           </div>
             <div class="cert-tech">
-              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
               <div class="cert-preview" data-cert="0">
                 <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
                 <div class="cert-pv-info">
-                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="1">
                 <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="2">
                 <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
                 </div>
               </div>
             </div>
 
-            
+
         </div>
       </div>
 
@@ -350,42 +350,42 @@
           <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
             <div class="tech-u-value-number">U = 0,25</div>
             <div class="tech-u-value-unit">W/m²K</div>
-            <div class="tech-u-value-label">Współczynnik przenikania ciepła</div>
+            <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
           </div>
           <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name">Tynk akrylowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Styropian fasadowy grafitowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name">Wełna mineralna w konstrukcji</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name">Folia PE (paroizolacja)</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name">Płyta gipsowo-kartonowa</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name" data-i18n="wall3_l1">Tynk akrylowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall3_l2">Styropian fasadowy grafitowy</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall3_l3">Płyta OSB</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall3_l4">Wełna mineralna w konstrukcji</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">0,2 mm</span><span class="wall-layer-name" data-i18n="wall3_l5">Folia PE (paroizolacja)</span></div>
+          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall3_l6">Płyta gipsowo-kartonowa</span></div>
           </div>
             <div class="cert-tech">
-              <div class="cert-tech-label">Dokumentacja i certyfikacja</div>
+              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
               <div class="cert-preview" data-cert="0">
                 <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
                 <div class="cert-pv-info">
-                  <div class="cert-pv-title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
+                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
+                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="1">
                 <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
                 </div>
               </div>
               <div class="cert-preview" data-cert="2">
                 <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
                 <div class="cert-pv-info">
                   <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc">International Technology Transfer – budownictwo drewniane.</div>
+                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
                 </div>
               </div>
             </div>
 
-            
+
         </div>
       </div>
     </div>
@@ -481,8 +481,8 @@
 <section class="section" id="modele">
   <div>
     <div class="section-label" data-i18n="models_label">Oferta</div>
-    <h2 class="section-title">Budujemy <em>każdy typ</em> domu</h2>
-    <p class="section-text" style="font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;">Realizujemy domy na podstawie projektów wybranych przez naszych klientów — zarówno z gotowych katalogów, jak i indywidualnych pracowni architektonicznych. Niezależnie od stylu i wielkości, każdy projekt dostosowujemy do technologii prefabrykowanej konstrukcji drewnianej.</p>
+    <h2 class="section-title" data-i18n-html="offer_title">Budujemy <em>każdy typ</em> domu</h2>
+    <p class="section-text" style="font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;" data-i18n="offer_desc">Realizujemy domy na podstawie projektów wybranych przez naszych klientów — zarówno z gotowych katalogów, jak i indywidualnych pracowni architektonicznych. Niezależnie od stylu i wielkości, każdy projekt dostosowujemy do technologii prefabrykowanej konstrukcji drewnianej.</p>
   </div>
 
   <div class="offer-types">
@@ -494,8 +494,8 @@
           <rect x="18" y="30" width="12" height="10" rx="1"/>
         </svg>
       </div>
-      <h3 class="offer-type-name">Domy parterowe</h3>
-      <p class="offer-type-desc">Funkcjonalne układy na jednym poziomie. Idealne dla rodzin ceniących wygodę i bezprogowy komfort.</p>
+      <h3 class="offer-type-name" data-i18n="offer_single_title">Domy parterowe</h3>
+      <p class="offer-type-desc" data-i18n="offer_single_desc">Funkcjonalne układy na jednym poziomie. Idealne dla rodzin ceniących wygodę i bezprogowy komfort.</p>
     </div>
     <div class="offer-type">
       <div class="offer-icon">
@@ -508,8 +508,8 @@
           <line x1="6" y1="30" x2="42" y2="30"/>
         </svg>
       </div>
-      <h3 class="offer-type-name">Domy piętrowe</h3>
-      <p class="offer-type-desc">Więcej przestrzeni na mniejszej działce. Oddzielna strefa dzienna i nocna dla większych rodzin.</p>
+      <h3 class="offer-type-name" data-i18n="offer_two_title">Domy piętrowe</h3>
+      <p class="offer-type-desc" data-i18n="offer_two_desc">Więcej przestrzeni na mniejszej działce. Oddzielna strefa dzienna i nocna dla większych rodzin.</p>
     </div>
     <div class="offer-type">
       <div class="offer-icon">
@@ -520,8 +520,8 @@
           <line x1="24" y1="6" x2="24" y2="12"/>
         </svg>
       </div>
-      <h3 class="offer-type-name">Domy z antresolą</h3>
-      <p class="offer-type-desc">Otwarta przestrzeń z wysokim sufitem. Nowoczesna forma, popularna w stylu stodoła i loft.</p>
+      <h3 class="offer-type-name" data-i18n="offer_mezzanine_title">Domy z antresolą</h3>
+      <p class="offer-type-desc" data-i18n="offer_mezzanine_desc">Otwarta przestrzeń z wysokim sufitem. Nowoczesna forma, popularna w stylu stodoła i loft.</p>
     </div>
     <div class="offer-type">
       <div class="offer-icon">
@@ -534,8 +534,8 @@
           <rect x="32" y="28" width="6" height="8" rx="0.5"/>
         </svg>
       </div>
-      <h3 class="offer-type-name">Domy bliźniacze</h3>
-      <p class="offer-type-desc">Dwa niezależne segmenty w jednej bryle. Ekonomiczne rozwiązanie dla dwóch rodzin lub inwestorów.</p>
+      <h3 class="offer-type-name" data-i18n="offer_twin_title">Domy bliźniacze</h3>
+      <p class="offer-type-desc" data-i18n="offer_twin_desc">Dwa niezależne segmenty w jednej bryle. Ekonomiczne rozwiązanie dla dwóch rodzin lub inwestorów.</p>
     </div>
     <div class="offer-type">
       <div class="offer-icon">
@@ -548,30 +548,30 @@
           <path d="M38 12l1.5 1.5 3-3"/>
         </svg>
       </div>
-      <h3 class="offer-type-name">Domy rekreacyjne</h3>
-      <p class="offer-type-desc">Kompaktowe domy letniskowe i całoroczne. Szybka realizacja, wysoka jakość wykończenia.</p>
+      <h3 class="offer-type-name" data-i18n="offer_rec_title">Domy rekreacyjne</h3>
+      <p class="offer-type-desc" data-i18n="offer_rec_desc">Kompaktowe domy letniskowe i całoroczne. Szybka realizacja, wysoka jakość wykończenia.</p>
     </div>
   </div>
 
   <div class="offer-bottom">
     <div class="offer-process">
-      <h3 class="offer-process-title">Jak to działa?</h3>
+      <h3 class="offer-process-title" data-i18n="offer_how_title">Jak to działa?</h3>
       <div class="offer-steps">
         <div class="offer-step">
           <span class="offer-step-num">01</span>
-          <span class="offer-step-text">Dostarczasz projekt domu — z katalogu lub od architekta</span>
+          <span class="offer-step-text" data-i18n="offer_step_1">Dostarczasz projekt domu — z katalogu lub od architekta</span>
         </div>
         <div class="offer-step">
           <span class="offer-step-num">02</span>
-          <span class="offer-step-text">Analizujemy i dostosowujemy do technologii szkieletowej</span>
+          <span class="offer-step-text" data-i18n="offer_step_2">Analizujemy i dostosowujemy do technologii szkieletowej</span>
         </div>
         <div class="offer-step">
           <span class="offer-step-num">03</span>
-          <span class="offer-step-text">Produkujemy prefabrykowane elementy w naszej fabryce</span>
+          <span class="offer-step-text" data-i18n="offer_step_3">Produkujemy prefabrykowane elementy w naszej fabryce</span>
         </div>
         <div class="offer-step">
           <span class="offer-step-num">04</span>
-          <span class="offer-step-text">Montujemy dom na Twojej działce — nawet w 90 dni</span>
+          <span class="offer-step-text" data-i18n="offer_step_4">Montujemy dom na Twojej działce — nawet w 90 dni</span>
         </div>
       </div>
     </div>
@@ -626,7 +626,7 @@
     <h2 class="section-title" data-i18n-html="gallery_title">Nasze <em>realizacje</em></h2>
     <p class="section-text" data-i18n="gallery_desc">Zrealizowane w Polsce i za granicą.</p>
     <button class="gallery-toggle" id="galleryToggle">
-      <span data-label-more="Zobacz więcej realizacji" data-label-less="Zwiń">Zobacz więcej realizacji</span>
+      <span data-label-more="Zobacz więcej realizacji" data-label-less="Zwiń" data-i18n="gallery_more">Zobacz więcej realizacji</span>
       <svg class="gallery-toggle-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
   </div>
@@ -989,7 +989,7 @@
     <div>
       <div class="section-label" data-i18n="factory_label">Produkcja</div>
       <h2 class="section-title" data-i18n-html="factory_title">Nasza <em>fabryka</em></h2>
-      <p class="section-text">
+      <p class="section-text" data-i18n="factory_desc">
         Domy powstają w naszej fabryce, gdzie produkowane są gotowe elementy ścian i konstrukcji. Pozwala to skrócić czas budowy i zwiększyć precyzję wykonania.
       </p>
       <div class="factory-features">
@@ -1028,73 +1028,73 @@
       <div class="factory-thumb factory-thumb-wide reveal-scale-soft">
         <img src="img/asset-021.jpg" alt="Podnoszenie ściany OSB" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Podnoszenie ściany OSB</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_1">Podnoszenie ściany OSB</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-022.jpg" alt="Montaż ramy ściennej" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż ramy ściennej</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_2">Montaż ramy ściennej</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-023.jpg" alt="Szkielet ściany z otworami" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Szkielet ściany z otworami</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_3">Szkielet ściany z otworami</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-024.jpg" alt="Montaż płyt g-k" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż płyt g-k</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_4">Montaż płyt g-k</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-025.jpg" alt="Izolacja wełną mineralną" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Izolacja wełną mineralną</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_5">Izolacja wełną mineralną</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-026.jpg" alt="Montaż styropianu fasadowego" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Montaż styropianu fasadowego</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_6">Montaż styropianu fasadowego</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-027.jpg" alt="Gotowa ściana z izolacją" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Gotowa ściana z izolacją</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_7">Gotowa ściana z izolacją</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-028.jpg" alt="Klejenie styropianu" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Klejenie styropianu</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_8">Klejenie styropianu</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-029.jpg" alt="Ściana z płytą OSB" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Ściana z płytą OSB</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_9">Ściana z płytą OSB</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-030.jpg" alt="Układanie wełny mineralnej" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Układanie wełny mineralnej</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_10">Układanie wełny mineralnej</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-031.jpg" alt="Pakowanie ściany do transportu" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Pakowanie ściany do transportu</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_11">Pakowanie ściany do transportu</span>
         </div>
       </div>
       <div class="factory-thumb reveal-scale-soft">
         <img src="img/asset-032.jpg" alt="Drewno konstrukcyjne" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.7),transparent 60%);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:flex-end;padding:0.8rem;" class="factory-thumb-overlay">
-          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);">Drewno konstrukcyjne</span>
+          <span style="font-family:var(--font-display);font-size:0.85rem;color:var(--text-primary);" data-i18n="factory_ov_12">Drewno konstrukcyjne</span>
         </div>
       </div>
     </div>
@@ -1193,7 +1193,7 @@
       </div>
     </div>
     <div>
-      <h4 class="footer-heading">Kontakt</h4>
+      <h4 class="footer-heading" data-i18n="footer_contact">Kontakt</h4>
       <div class="footer-links">
         <a href="tel:+48503787528">+48 503 787 528</a><br><a href="tel:+48501634705">+48 501 634 705</a>
         <a href="mailto:vidal.ajtner@gmail.com" style="color:var(--gold);">vidal.ajtner@gmail.com</a>

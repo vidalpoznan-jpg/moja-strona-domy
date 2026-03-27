@@ -57,7 +57,7 @@ function handleFormSubmit() {
   });
 
   btn.disabled = true;
-  btn.textContent = 'Wysyłanie...';
+  btn.textContent = (i18n[currentLang] && i18n[currentLang].form_sending) || 'Wysyłanie...';
 
   fetch('send-mail.php', {
     method: 'POST',
@@ -68,27 +68,20 @@ function handleFormSubmit() {
   .then(function(result) {
     if (result.success) {
       var msg = 'Dziękujemy za wiadomość. Odpowiemy najszybciej jak to możliwe.';
-      if (typeof currentLang !== 'undefined') {
-        if (currentLang === 'en') msg = 'Thank you for your message. We will reply as soon as possible.';
-        if (currentLang === 'de') msg = 'Vielen Dank für Ihre Nachricht. Wir antworten so schnell wie möglich.';
-      }
+      if (currentLang === 'en') msg = 'Thank you for your message. We will reply as soon as possible.';
+      if (currentLang === 'de') msg = 'Vielen Dank für Ihre Nachricht. Wir antworten so schnell wie möglich.';
       alert(msg);
       inputs.forEach(function(input) { input.value = ''; });
     } else {
-      alert(result.message || 'Wystąpił błąd. Spróbuj ponownie.');
+      alert(result.message || ((i18n[currentLang] && i18n[currentLang].form_error) || 'Wystąpił błąd. Spróbuj ponownie.'));
     }
   })
   .catch(function() {
-    alert('Błąd połączenia. Sprawdź internet i spróbuj ponownie.');
+    alert((i18n[currentLang] && i18n[currentLang].form_network_error) || 'Błąd połączenia. Sprawdź internet i spróbuj ponownie.');
   })
   .finally(function() {
     btn.disabled = false;
-    var btnText = 'Wyślij wiadomość';
-    if (typeof currentLang !== 'undefined') {
-      if (currentLang === 'en') btnText = 'Send message';
-      if (currentLang === 'de') btnText = 'Nachricht senden';
-    }
-    btn.textContent = btnText;
+    btn.textContent = (i18n[currentLang] && i18n[currentLang].contact_submit) || 'Wyślij wiadomość';
   });
 }
 
@@ -191,6 +184,79 @@ const i18n = {
     map_desc: "Nasze domy stoją w 8 krajach europejskich. Każdy projekt realizujemy z tą samą precyzją – niezależnie od lokalizacji.",
     map_poland: "Polska", map_germany: "Niemcy", map_switzerland: "Szwajcaria",
     map_spain: "Hiszpania", map_norway: "Norwegia", map_england: "Anglia", map_austria: "Austria", map_france: "Francja",
+
+    // Wall tab short labels
+    wall_tab_u_1: "Wewnętrzna", wall_tab_u_2: "Drewniana",
+
+    // Wall panel 0 – internal wall
+    wall0_title: "Ściana wewnętrzna", wall0_subtitle: "Izolacja akustyczna",
+    wall0_l1: "Płyta kartonowo-gipsowa", wall0_l2: "Płyta OSB", wall0_l3: "Wełna akustyczna",
+    wall0_l4: "Płyta OSB", wall0_l5: "Płyta gipsowo-kartonowa",
+
+    // Wall panel 1 – wooden facade
+    wall1_title: "Elewacja drewniana", wall1_subtitle: "Fasada wentylowana",
+    wall1_l1: "Elewacja drewniana", wall1_l2: "Szczelina wentylacyjna",
+    wall1_l3: "Membrana wiatroizolacja", wall1_l4: "Styropian fasadowy grafitowy",
+    wall1_l5: "Płyta OSB", wall1_l6: "Wełna w konstrukcji",
+    wall1_l7: "Folia PE (paroizolacyjna)", wall1_l8: "Ruszt instalacyjny + wełna",
+    wall1_l9: "Płyta OSB", wall1_l10: "Płyta kartonowo-gipsowa",
+
+    // Wall panel 2 – energy-efficient U=0.15
+    wall2_l1: "Tynk akrylowy", wall2_l2: "Styropian fasadowy grafitowy",
+    wall2_l3: "Płyta OSB", wall2_l4: "Wełna mineralna w konstrukcji",
+    wall2_l5: "Folia PE (paroizolacja)", wall2_l6: "Ruszt instalacyjny + wełna",
+    wall2_l7: "Płyta OSB", wall2_l8: "Płyta gipsowo-kartonowa",
+
+    // Wall panel 3 – standard U=0.25
+    wall3_l1: "Tynk akrylowy", wall3_l2: "Styropian fasadowy grafitowy",
+    wall3_l3: "Płyta OSB", wall3_l4: "Wełna mineralna w konstrukcji",
+    wall3_l5: "Folia PE (paroizolacja)", wall3_l6: "Płyta gipsowo-kartonowa",
+
+    // Certification
+    cert_label: "Dokumentacja i certyfikacja",
+    cert_din_title: "Certyfikat DIN 1052",
+    cert_din_desc: "Zgodność paneli ściennych z normą budowlaną. MPA Dresden.",
+    cert_cochran_desc: "Szkolenie USDA w budownictwie drewnianym, USA 1995.",
+    cert_wood_desc: "International Technology Transfer – budownictwo drewniane.",
+
+    // Offer section
+    offer_title: 'Budujemy <em>każdy typ</em> domu',
+    offer_desc: "Realizujemy domy na podstawie projektów wybranych przez naszych klientów — zarówno z gotowych katalogów, jak i indywidualnych pracowni architektonicznych. Niezależnie od stylu i wielkości, każdy projekt dostosowujemy do technologii prefabrykowanej konstrukcji drewnianej.",
+    offer_single_title: "Domy parterowe",
+    offer_single_desc: "Funkcjonalne układy na jednym poziomie. Idealne dla rodzin ceniących wygodę i bezprogowy komfort.",
+    offer_two_title: "Domy piętrowe",
+    offer_two_desc: "Więcej przestrzeni na mniejszej działce. Oddzielna strefa dzienna i nocna dla większych rodzin.",
+    offer_mezzanine_title: "Domy z antresolą",
+    offer_mezzanine_desc: "Otwarta przestrzeń z wysokim sufitem. Nowoczesna forma, popularna w stylu stodoła i loft.",
+    offer_twin_title: "Domy bliźniacze",
+    offer_twin_desc: "Dwa niezależne segmenty w jednej bryle. Ekonomiczne rozwiązanie dla dwóch rodzin lub inwestorów.",
+    offer_rec_title: "Domy rekreacyjne",
+    offer_rec_desc: "Kompaktowe domy letniskowe i całoroczne. Szybka realizacja, wysoka jakość wykończenia.",
+    offer_how_title: "Jak to działa?",
+    offer_step_1: "Dostarczasz projekt domu — z katalogu lub od architekta",
+    offer_step_2: "Analizujemy i dostosowujemy do technologii szkieletowej",
+    offer_step_3: "Produkujemy prefabrykowane elementy w naszej fabryce",
+    offer_step_4: "Montujemy dom na Twojej działce — nawet w 90 dni",
+
+    // Gallery toggle
+    gallery_more: "Zobacz więcej realizacji", gallery_less: "Zwiń",
+
+    // Factory overlays
+    factory_ov_1: "Podnoszenie ściany OSB", factory_ov_2: "Montaż ramy ściennej",
+    factory_ov_3: "Szkielet ściany z otworami", factory_ov_4: "Montaż płyt g-k",
+    factory_ov_5: "Izolacja wełną mineralną", factory_ov_6: "Montaż styropianu fasadowego",
+    factory_ov_7: "Gotowa ściana z izolacją", factory_ov_8: "Klejenie styropianu",
+    factory_ov_9: "Ściana z płytą OSB", factory_ov_10: "Układanie wełny mineralnej",
+    factory_ov_11: "Pakowanie ściany do transportu", factory_ov_12: "Drewno konstrukcyjne",
+
+    // Footer
+    footer_contact: "Kontakt",
+    footer_copy: "Wszelkie prawa zastrzeżone.",
+
+    // JS messages
+    form_sending: "Wysyłanie...",
+    form_error: "Wystąpił błąd. Spróbuj ponownie.",
+    form_network_error: "Błąd połączenia. Sprawdź internet i spróbuj ponownie.",
   },
   en: {
     nav_about: "About", nav_models: "Models", nav_tech: "Technology",
@@ -273,6 +339,79 @@ const i18n = {
     map_desc: "Our houses stand in 8 European countries. Every project is delivered with the same precision – regardless of location.",
     map_poland: "Poland", map_germany: "Germany", map_switzerland: "Switzerland",
     map_spain: "Spain", map_norway: "Norway", map_england: "England", map_austria: "Austria", map_france: "France",
+
+    // Wall tab short labels
+    wall_tab_u_1: "Internal", wall_tab_u_2: "Wooden",
+
+    // Wall panel 0 – internal wall
+    wall0_title: "Internal wall", wall0_subtitle: "Acoustic insulation",
+    wall0_l1: "Plasterboard", wall0_l2: "OSB board", wall0_l3: "Acoustic wool",
+    wall0_l4: "OSB board", wall0_l5: "Gypsum plasterboard",
+
+    // Wall panel 1 – wooden facade
+    wall1_title: "Wooden facade", wall1_subtitle: "Ventilated facade",
+    wall1_l1: "Wooden cladding", wall1_l2: "Ventilation gap",
+    wall1_l3: "Windproof membrane", wall1_l4: "Graphite facade polystyrene",
+    wall1_l5: "OSB board", wall1_l6: "Insulation wool in frame",
+    wall1_l7: "PE vapour barrier film", wall1_l8: "Service void + insulation",
+    wall1_l9: "OSB board", wall1_l10: "Plasterboard",
+
+    // Wall panel 2 – energy-efficient U=0.15
+    wall2_l1: "Acrylic render", wall2_l2: "Graphite facade polystyrene",
+    wall2_l3: "OSB board", wall2_l4: "Mineral wool in frame",
+    wall2_l5: "PE vapour barrier", wall2_l6: "Service void + insulation",
+    wall2_l7: "OSB board", wall2_l8: "Gypsum plasterboard",
+
+    // Wall panel 3 – standard U=0.25
+    wall3_l1: "Acrylic render", wall3_l2: "Graphite facade polystyrene",
+    wall3_l3: "OSB board", wall3_l4: "Mineral wool in frame",
+    wall3_l5: "PE vapour barrier", wall3_l6: "Gypsum plasterboard",
+
+    // Certification
+    cert_label: "Documentation and certification",
+    cert_din_title: "DIN 1052 Certificate",
+    cert_din_desc: "Wall panel compliance with building standard. MPA Dresden.",
+    cert_cochran_desc: "USDA training in timber construction, USA 1995.",
+    cert_wood_desc: "International Technology Transfer – timber construction.",
+
+    // Offer section
+    offer_title: 'We build <em>every type</em> of home',
+    offer_desc: "We build houses based on designs chosen by our clients — from ready-made catalogues as well as individual architectural studios. Regardless of style and size, we adapt every design to prefabricated timber frame technology.",
+    offer_single_title: "Single-storey houses",
+    offer_single_desc: "Functional layouts on one level. Ideal for families who value convenience and barrier-free comfort.",
+    offer_two_title: "Two-storey houses",
+    offer_two_desc: "More space on a smaller plot. Separate living and sleeping zones for larger families.",
+    offer_mezzanine_title: "Homes with mezzanine",
+    offer_mezzanine_desc: "Open space with high ceilings. Modern form, popular in barn and loft styles.",
+    offer_twin_title: "Semi-detached houses",
+    offer_twin_desc: "Two independent units in one structure. An economical solution for two families or investors.",
+    offer_rec_title: "Holiday homes",
+    offer_rec_desc: "Compact holiday and year-round houses. Fast construction, high-quality finish.",
+    offer_how_title: "How does it work?",
+    offer_step_1: "You provide a house design — from a catalogue or architect",
+    offer_step_2: "We analyse and adapt it to timber frame technology",
+    offer_step_3: "We manufacture prefabricated elements in our factory",
+    offer_step_4: "We assemble the house on your plot — in as little as 90 days",
+
+    // Gallery toggle
+    gallery_more: "See more projects", gallery_less: "Show less",
+
+    // Factory overlays
+    factory_ov_1: "Lifting OSB wall panel", factory_ov_2: "Wall frame assembly",
+    factory_ov_3: "Wall frame with openings", factory_ov_4: "Plasterboard installation",
+    factory_ov_5: "Mineral wool insulation", factory_ov_6: "Facade polystyrene installation",
+    factory_ov_7: "Finished insulated wall", factory_ov_8: "Polystyrene bonding",
+    factory_ov_9: "Wall with OSB board", factory_ov_10: "Laying mineral wool",
+    factory_ov_11: "Packaging wall for transport", factory_ov_12: "Structural timber",
+
+    // Footer
+    footer_contact: "Contact",
+    footer_copy: "All rights reserved.",
+
+    // JS messages
+    form_sending: "Sending...",
+    form_error: "An error occurred. Please try again.",
+    form_network_error: "Connection error. Check your internet and try again.",
   },
   de: {
     nav_about: "Über uns", nav_models: "Modelle", nav_tech: "Technologie",
@@ -355,6 +494,79 @@ const i18n = {
     map_desc: "Unsere Häuser stehen in 8 europäischen Ländern. Jedes Projekt wird mit der gleichen Präzision umgesetzt – unabhängig vom Standort.",
     map_poland: "Polen", map_germany: "Deutschland", map_switzerland: "Schweiz",
     map_spain: "Spanien", map_norway: "Norwegen", map_england: "England", map_austria: "Österreich", map_france: "Frankreich",
+
+    // Wall tab short labels
+    wall_tab_u_1: "Innen", wall_tab_u_2: "Holz",
+
+    // Wall panel 0 – internal wall
+    wall0_title: "Innenwand", wall0_subtitle: "Schalldämmung",
+    wall0_l1: "Gipskartonplatte", wall0_l2: "OSB-Platte", wall0_l3: "Akustikwolle",
+    wall0_l4: "OSB-Platte", wall0_l5: "Gipskartonplatte",
+
+    // Wall panel 1 – wooden facade
+    wall1_title: "Holzfassade", wall1_subtitle: "Hinterlüftete Fassade",
+    wall1_l1: "Holzverkleidung", wall1_l2: "Belüftungsspalt",
+    wall1_l3: "Winddichtungsmembran", wall1_l4: "Graphit-Fassadenstyropor",
+    wall1_l5: "OSB-Platte", wall1_l6: "Dämmwolle im Rahmen",
+    wall1_l7: "PE-Dampfsperrfolie", wall1_l8: "Installationsebene + Dämmung",
+    wall1_l9: "OSB-Platte", wall1_l10: "Gipskartonplatte",
+
+    // Wall panel 2 – energy-efficient U=0.15
+    wall2_l1: "Acrylputz", wall2_l2: "Graphit-Fassadenstyropor",
+    wall2_l3: "OSB-Platte", wall2_l4: "Mineralwolle im Rahmen",
+    wall2_l5: "PE-Dampfsperre", wall2_l6: "Installationsebene + Dämmung",
+    wall2_l7: "OSB-Platte", wall2_l8: "Gipskartonplatte",
+
+    // Wall panel 3 – standard U=0.25
+    wall3_l1: "Acrylputz", wall3_l2: "Graphit-Fassadenstyropor",
+    wall3_l3: "OSB-Platte", wall3_l4: "Mineralwolle im Rahmen",
+    wall3_l5: "PE-Dampfsperre", wall3_l6: "Gipskartonplatte",
+
+    // Certification
+    cert_label: "Dokumentation und Zertifizierung",
+    cert_din_title: "DIN 1052 Zertifikat",
+    cert_din_desc: "Konformität der Wandpaneele mit der Baunorm. MPA Dresden.",
+    cert_cochran_desc: "USDA-Schulung im Holzbau, USA 1995.",
+    cert_wood_desc: "International Technology Transfer – Holzbau.",
+
+    // Offer section
+    offer_title: 'Wir bauen <em>jeden Typ</em> von Haus',
+    offer_desc: "Wir bauen Häuser auf Grundlage von Entwürfen unserer Kunden — sowohl aus fertigen Katalogen als auch von individuellen Architekturbüros. Unabhängig von Stil und Größe passen wir jeden Entwurf an die vorgefertigte Holzrahmenbauweise an.",
+    offer_single_title: "Einstöckige Häuser",
+    offer_single_desc: "Funktionale Grundrisse auf einer Ebene. Ideal für Familien, die Komfort und barrierefreies Wohnen schätzen.",
+    offer_two_title: "Zweistöckige Häuser",
+    offer_two_desc: "Mehr Raum auf kleinerem Grundstück. Getrennte Wohn- und Schlafbereiche für größere Familien.",
+    offer_mezzanine_title: "Häuser mit Empore",
+    offer_mezzanine_desc: "Offener Raum mit hohen Decken. Moderne Form, beliebt im Scheunen- und Loftstil.",
+    offer_twin_title: "Doppelhaushälften",
+    offer_twin_desc: "Zwei unabhängige Einheiten in einem Baukörper. Eine wirtschaftliche Lösung für zwei Familien oder Investoren.",
+    offer_rec_title: "Ferienhäuser",
+    offer_rec_desc: "Kompakte Ferien- und Ganzjahreshäuser. Schnelle Realisierung, hochwertige Ausführung.",
+    offer_how_title: "Wie funktioniert es?",
+    offer_step_1: "Sie liefern einen Hausentwurf — aus dem Katalog oder vom Architekten",
+    offer_step_2: "Wir analysieren und passen ihn an die Holzrahmenbauweise an",
+    offer_step_3: "Wir fertigen vorgefertigte Elemente in unserer Fabrik",
+    offer_step_4: "Wir montieren das Haus auf Ihrem Grundstück — in nur 90 Tagen",
+
+    // Gallery toggle
+    gallery_more: "Mehr Projekte anzeigen", gallery_less: "Weniger anzeigen",
+
+    // Factory overlays
+    factory_ov_1: "Anheben der OSB-Wandplatte", factory_ov_2: "Montage des Wandrahmens",
+    factory_ov_3: "Wandrahmen mit Öffnungen", factory_ov_4: "Gipskartonmontage",
+    factory_ov_5: "Mineralwolldämmung", factory_ov_6: "Fassadenstyropormontage",
+    factory_ov_7: "Fertige gedämmte Wand", factory_ov_8: "Styroporverklebung",
+    factory_ov_9: "Wand mit OSB-Platte", factory_ov_10: "Verlegen der Mineralwolle",
+    factory_ov_11: "Verpacken der Wand für den Transport", factory_ov_12: "Konstruktionsholz",
+
+    // Footer
+    footer_contact: "Kontakt",
+    footer_copy: "Alle Rechte vorbehalten.",
+
+    // JS messages
+    form_sending: "Wird gesendet...",
+    form_error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    form_network_error: "Verbindungsfehler. Überprüfen Sie Ihr Internet und versuchen Sie es erneut.",
   }
 };
 
@@ -383,6 +595,19 @@ function setLang(lang) {
   formInputs.forEach(function(input, i) {
     if (phKeys[i] && ph[phKeys[i]]) input.placeholder = ph[phKeys[i]];
   });
+  // Gallery toggle labels
+  var gallerySpan = document.querySelector('#galleryToggle span');
+  if (gallerySpan && t.gallery_more && t.gallery_less) {
+    gallerySpan.setAttribute('data-label-more', t.gallery_more);
+    gallerySpan.setAttribute('data-label-less', t.gallery_less);
+    var isExpanded = document.querySelector('.proj-grid') && document.querySelector('.proj-grid').classList.contains('expanded');
+    gallerySpan.textContent = isExpanded ? t.gallery_less : t.gallery_more;
+  }
+  // Footer copyright
+  var copyEl = document.querySelector('.footer-copy');
+  if (copyEl && t.footer_copy) {
+    copyEl.innerHTML = '&copy; 2026 VIDAL. ' + t.footer_copy;
+  }
   document.querySelectorAll('.lang-btn').forEach(function(btn, i) {
     var langs = ['pl', 'en', 'de'];
     if (langs[i] === lang) btn.classList.add('active');
