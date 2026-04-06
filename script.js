@@ -194,12 +194,11 @@ const i18n = {
     wall0_l4: "Płyta OSB", wall0_l5: "Płyta gipsowo-kartonowa",
 
     // Wall panel 1 – wooden facade
-    wall1_title: "Elewacja drewniana", wall1_subtitle: "Fasada wentylowana",
-    wall1_l1: "Elewacja drewniana", wall1_l2: "Szczelina wentylacyjna",
-    wall1_l3: "Membrana wiatroizolacja", wall1_l4: "Wełna fasadowa Rockwool",
-    wall1_l5: "Płyta OSB", wall1_l6: "Wełna w konstrukcji",
-    wall1_l7: "Intello (inteligentna paroizolacja)", wall1_l8: "Ruszt instalacyjny + wełna",
-    wall1_l9: "Płyta OSB", wall1_l10: "Płyta kartonowo-gipsowa",
+    wall1_l1: "Drewno profilowane (elewacja)", wall1_l2: "Szczelina wentylacyjna KVH 40×60",
+    wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
+    wall1_l5: "Płyta OSB/3", wall1_l6: "Wełna mineralna λ=0,035 w konstrukcji KVH 120×60",
+    wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Ruszt instalacyjny KVH 60×60 + wełna",
+    wall1_l9: "Płyta OSB/3", wall1_l10: "Płyta gipsowo-kartonowa",
 
     // Wall panel 2 – energy-efficient U=0.15
     wall2_l1: "Tynk silikonowy", wall2_l2: "Styropian fasadowy grafitowy",
@@ -349,12 +348,11 @@ const i18n = {
     wall0_l4: "OSB board", wall0_l5: "Gypsum plasterboard",
 
     // Wall panel 1 – wooden facade
-    wall1_title: "Wooden facade", wall1_subtitle: "Ventilated facade",
-    wall1_l1: "Wooden cladding", wall1_l2: "Ventilation gap",
-    wall1_l3: "Windproof membrane", wall1_l4: "Rockwool facade insulation",
-    wall1_l5: "OSB board", wall1_l6: "Insulation wool in frame",
-    wall1_l7: "Intello (smart vapour control layer)", wall1_l8: "Service void + insulation",
-    wall1_l9: "OSB board", wall1_l10: "Plasterboard",
+    wall1_l1: "Profiled timber cladding", wall1_l2: "Ventilation gap KVH 40×60",
+    wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
+    wall1_l5: "OSB/3 board", wall1_l6: "Mineral wool λ=0.035 in KVH 120×60 frame",
+    wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Service void KVH 60×60 + insulation",
+    wall1_l9: "OSB/3 board", wall1_l10: "Gypsum plasterboard",
 
     // Wall panel 2 – energy-efficient U=0.15
     wall2_l1: "Silicone render", wall2_l2: "Graphite facade polystyrene",
@@ -504,12 +502,11 @@ const i18n = {
     wall0_l4: "OSB-Platte", wall0_l5: "Gipskartonplatte",
 
     // Wall panel 1 – wooden facade
-    wall1_title: "Holzfassade", wall1_subtitle: "Hinterlüftete Fassade",
-    wall1_l1: "Holzverkleidung", wall1_l2: "Belüftungsspalt",
-    wall1_l3: "Winddichtungsmembran", wall1_l4: "Rockwool Fassadendämmung",
-    wall1_l5: "OSB-Platte", wall1_l6: "Dämmwolle im Rahmen",
-    wall1_l7: "Intello (intelligente Dampfbremse)", wall1_l8: "Installationsebene + Dämmung",
-    wall1_l9: "OSB-Platte", wall1_l10: "Gipskartonplatte",
+    wall1_l1: "Profilholz (Fassade)", wall1_l2: "Belüftungsspalt KVH 40×60",
+    wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
+    wall1_l5: "OSB/3-Platte", wall1_l6: "Mineralwolle λ=0,035 im KVH 120×60 Rahmen",
+    wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Installationsebene KVH 60×60 + Dämmung",
+    wall1_l9: "OSB/3-Platte", wall1_l10: "Gipskartonplatte",
 
     // Wall panel 2 – energy-efficient U=0.15
     wall2_l1: "Silikonputz", wall2_l2: "Graphit-Fassadenstyropor",
