@@ -196,9 +196,9 @@ const i18n = {
     // Wall panel 1 – wooden facade
     wall1_title: "Elewacja drewniana", wall1_subtitle: "Fasada wentylowana",
     wall1_l1: "Elewacja drewniana", wall1_l2: "Szczelina wentylacyjna",
-    wall1_l3: "Membrana wiatroizolacja", wall1_l4: "Styropian fasadowy grafitowy",
+    wall1_l3: "Membrana wiatroizolacja", wall1_l4: "Wełna fasadowa Rockwool",
     wall1_l5: "Płyta OSB", wall1_l6: "Wełna w konstrukcji",
-    wall1_l7: "Folia PE (paroizolacyjna)", wall1_l8: "Ruszt instalacyjny + wełna",
+    wall1_l7: "Intello (inteligentna paroizolacja)", wall1_l8: "Ruszt instalacyjny + wełna",
     wall1_l9: "Płyta OSB", wall1_l10: "Płyta kartonowo-gipsowa",
 
     // Wall panel 2 – energy-efficient U=0.15
@@ -351,9 +351,9 @@ const i18n = {
     // Wall panel 1 – wooden facade
     wall1_title: "Wooden facade", wall1_subtitle: "Ventilated facade",
     wall1_l1: "Wooden cladding", wall1_l2: "Ventilation gap",
-    wall1_l3: "Windproof membrane", wall1_l4: "Graphite facade polystyrene",
+    wall1_l3: "Windproof membrane", wall1_l4: "Rockwool facade insulation",
     wall1_l5: "OSB board", wall1_l6: "Insulation wool in frame",
-    wall1_l7: "PE vapour barrier film", wall1_l8: "Service void + insulation",
+    wall1_l7: "Intello (smart vapour control layer)", wall1_l8: "Service void + insulation",
     wall1_l9: "OSB board", wall1_l10: "Plasterboard",
 
     // Wall panel 2 – energy-efficient U=0.15
@@ -506,9 +506,9 @@ const i18n = {
     // Wall panel 1 – wooden facade
     wall1_title: "Holzfassade", wall1_subtitle: "Hinterlüftete Fassade",
     wall1_l1: "Holzverkleidung", wall1_l2: "Belüftungsspalt",
-    wall1_l3: "Winddichtungsmembran", wall1_l4: "Graphit-Fassadenstyropor",
+    wall1_l3: "Winddichtungsmembran", wall1_l4: "Rockwool Fassadendämmung",
     wall1_l5: "OSB-Platte", wall1_l6: "Dämmwolle im Rahmen",
-    wall1_l7: "PE-Dampfsperrfolie", wall1_l8: "Installationsebene + Dämmung",
+    wall1_l7: "Intello (intelligente Dampfbremse)", wall1_l8: "Installationsebene + Dämmung",
     wall1_l9: "OSB-Platte", wall1_l10: "Gipskartonplatte",
 
     // Wall panel 2 – energy-efficient U=0.15
