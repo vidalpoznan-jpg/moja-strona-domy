@@ -202,15 +202,15 @@ const i18n = {
     wall1_l9: "Płyta OSB", wall1_l10: "Płyta kartonowo-gipsowa",
 
     // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Tynk akrylowy", wall2_l2: "Styropian fasadowy grafitowy",
+    wall2_l1: "Tynk silikonowy", wall2_l2: "Styropian fasadowy grafitowy",
     wall2_l3: "Płyta OSB", wall2_l4: "Wełna mineralna w konstrukcji",
-    wall2_l5: "Folia PE (paroizolacja)", wall2_l6: "Ruszt instalacyjny + wełna",
+    wall2_l5: "Intello (inteligentna paroizolacja)", wall2_l6: "Ruszt instalacyjny + wełna",
     wall2_l7: "Płyta OSB", wall2_l8: "Płyta gipsowo-kartonowa",
 
     // Wall panel 3 – standard U=0.25
-    wall3_l1: "Tynk akrylowy", wall3_l2: "Styropian fasadowy grafitowy",
+    wall3_l1: "Tynk silikonowy", wall3_l2: "Styropian fasadowy grafitowy",
     wall3_l3: "Płyta OSB", wall3_l4: "Wełna mineralna w konstrukcji",
-    wall3_l5: "Folia PE (paroizolacja)", wall3_l6: "Płyta gipsowo-kartonowa",
+    wall3_l5: "Intello (inteligentna paroizolacja)", wall3_l6: "Płyta gipsowo-kartonowa",
 
     // Certification
     cert_label: "Dokumentacja i certyfikacja",
@@ -357,15 +357,15 @@ const i18n = {
     wall1_l9: "OSB board", wall1_l10: "Plasterboard",
 
     // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Acrylic render", wall2_l2: "Graphite facade polystyrene",
+    wall2_l1: "Silicone render", wall2_l2: "Graphite facade polystyrene",
     wall2_l3: "OSB board", wall2_l4: "Mineral wool in frame",
-    wall2_l5: "PE vapour barrier", wall2_l6: "Service void + insulation",
+    wall2_l5: "Intello (smart vapour control layer)", wall2_l6: "Service void + insulation",
     wall2_l7: "OSB board", wall2_l8: "Gypsum plasterboard",
 
     // Wall panel 3 – standard U=0.25
-    wall3_l1: "Acrylic render", wall3_l2: "Graphite facade polystyrene",
+    wall3_l1: "Silicone render", wall3_l2: "Graphite facade polystyrene",
     wall3_l3: "OSB board", wall3_l4: "Mineral wool in frame",
-    wall3_l5: "PE vapour barrier", wall3_l6: "Gypsum plasterboard",
+    wall3_l5: "Intello (smart vapour control layer)", wall3_l6: "Gypsum plasterboard",
 
     // Certification
     cert_label: "Documentation and certification",
@@ -512,15 +512,15 @@ const i18n = {
     wall1_l9: "OSB-Platte", wall1_l10: "Gipskartonplatte",
 
     // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Acrylputz", wall2_l2: "Graphit-Fassadenstyropor",
+    wall2_l1: "Silikonputz", wall2_l2: "Graphit-Fassadenstyropor",
     wall2_l3: "OSB-Platte", wall2_l4: "Mineralwolle im Rahmen",
-    wall2_l5: "PE-Dampfsperre", wall2_l6: "Installationsebene + Dämmung",
+    wall2_l5: "Intello (intelligente Dampfbremse)", wall2_l6: "Installationsebene + Dämmung",
     wall2_l7: "OSB-Platte", wall2_l8: "Gipskartonplatte",
 
     // Wall panel 3 – standard U=0.25
-    wall3_l1: "Acrylputz", wall3_l2: "Graphit-Fassadenstyropor",
+    wall3_l1: "Silikonputz", wall3_l2: "Graphit-Fassadenstyropor",
     wall3_l3: "OSB-Platte", wall3_l4: "Mineralwolle im Rahmen",
-    wall3_l5: "PE-Dampfsperre", wall3_l6: "Gipskartonplatte",
+    wall3_l5: "Intello (intelligente Dampfbremse)", wall3_l6: "Gipskartonplatte",
 
     // Certification
     cert_label: "Dokumentation und Zertifizierung",
