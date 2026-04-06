@@ -194,6 +194,7 @@ const i18n = {
     wall0_l4: "Płyta OSB", wall0_l5: "Płyta gipsowo-kartonowa",
 
     // Wall panel 1 – wooden facade
+    wall1_card1: "W/m²K · spełnia KfW 40", wall1_card2: "Rezerwa wysychania · 8,6× DIN", wall1_card3: "Przesunięcie fazowe · tłumienie 23×",
     wall1_l1: "Drewno profilowane (elewacja)", wall1_l2: "Szczelina wentylacyjna KVH 40×60",
     wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
     wall1_l5: "Płyta OSB/3", wall1_l6: "Wełna mineralna λ=0,035 w konstrukcji KVH 120×60",
@@ -348,6 +349,7 @@ const i18n = {
     wall0_l4: "OSB board", wall0_l5: "Gypsum plasterboard",
 
     // Wall panel 1 – wooden facade
+    wall1_card1: "W/m²K · meets KfW 40", wall1_card2: "Drying reserve · 8.6× DIN standard", wall1_card3: "Phase shift · damping 23×",
     wall1_l1: "Profiled timber cladding", wall1_l2: "Ventilation gap KVH 40×60",
     wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
     wall1_l5: "OSB/3 board", wall1_l6: "Mineral wool λ=0.035 in KVH 120×60 frame",
@@ -502,6 +504,7 @@ const i18n = {
     wall0_l4: "OSB-Platte", wall0_l5: "Gipskartonplatte",
 
     // Wall panel 1 – wooden facade
+    wall1_card1: "W/m²K · erfüllt KfW 40", wall1_card2: "Trocknungsreserve · 8,6× DIN-Norm", wall1_card3: "Phasenverschiebung · Dämpfung 23×",
     wall1_l1: "Profilholz (Fassade)", wall1_l2: "Belüftungsspalt KVH 40×60",
     wall1_l3: "ROCKWOOL Fixrock 035 VS", wall1_l4: "pro clima SOLITEX FRONTA® WA",
     wall1_l5: "OSB/3-Platte", wall1_l6: "Mineralwolle λ=0,035 im KVH 120×60 Rahmen",
