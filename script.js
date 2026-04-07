@@ -201,11 +201,12 @@ const i18n = {
     wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Ruszt instalacyjny KVH 60×60 + wełna",
     wall1_l9: "Płyta OSB/3", wall1_l10: "Płyta gipsowo-kartonowa",
 
-    // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Tynk silikonowy", wall2_l2: "Styropian fasadowy grafitowy",
-    wall2_l3: "Płyta OSB", wall2_l4: "Wełna mineralna w konstrukcji",
-    wall2_l5: "Intello (inteligentna paroizolacja)", wall2_l6: "Ruszt instalacyjny + wełna",
-    wall2_l7: "Płyta OSB", wall2_l8: "Płyta gipsowo-kartonowa",
+    // Wall panel 2 – energy-efficient U=0.13
+    wall2_card1: "W/m²K · spełnia KfW 40", wall2_card2: "Rezerwa wysychania · 5,3× DIN", wall2_card3: "Przesunięcie fazowe · tłumienie 29×",
+    wall2_l1: "Tynk silikonowy", wall2_l2: "EPS grafitowy 032 WDV",
+    wall2_l3: "Płyta OSB/3", wall2_l4: "Wełna mineralna λ=0,035 w konstrukcji KVH 120×60",
+    wall2_l5: "pro clima INTELLO®", wall2_l6: "Wełna mineralna w ruszcie instalacyjnym KVH 60×60",
+    wall2_l7: "Płyta OSB/3", wall2_l8: "Płyta gipsowo-kartonowa",
 
     // Wall panel 3 – standard U=0.25
     wall3_l1: "Tynk silikonowy", wall3_l2: "Styropian fasadowy grafitowy",
@@ -356,11 +357,12 @@ const i18n = {
     wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Service void KVH 60×60 + insulation",
     wall1_l9: "OSB/3 board", wall1_l10: "Gypsum plasterboard",
 
-    // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Silicone render", wall2_l2: "Graphite facade polystyrene",
-    wall2_l3: "OSB board", wall2_l4: "Mineral wool in frame",
-    wall2_l5: "Intello (smart vapour control layer)", wall2_l6: "Service void + insulation",
-    wall2_l7: "OSB board", wall2_l8: "Gypsum plasterboard",
+    // Wall panel 2 – energy-efficient U=0.13
+    wall2_card1: "W/m²K · meets KfW 40", wall2_card2: "Drying reserve · 5.3× DIN standard", wall2_card3: "Phase shift · damping 29×",
+    wall2_l1: "Silicone render", wall2_l2: "Graphite EPS 032 ETICS",
+    wall2_l3: "OSB/3 board", wall2_l4: "Mineral wool λ=0.035 in KVH 120×60 frame",
+    wall2_l5: "pro clima INTELLO®", wall2_l6: "Mineral wool in KVH 60×60 service void",
+    wall2_l7: "OSB/3 board", wall2_l8: "Plasterboard",
 
     // Wall panel 3 – standard U=0.25
     wall3_l1: "Silicone render", wall3_l2: "Graphite facade polystyrene",
@@ -511,11 +513,12 @@ const i18n = {
     wall1_l7: "pro clima INTELLO® PLUS", wall1_l8: "Installationsebene KVH 60×60 + Dämmung",
     wall1_l9: "OSB/3-Platte", wall1_l10: "Gipskartonplatte",
 
-    // Wall panel 2 – energy-efficient U=0.15
-    wall2_l1: "Silikonputz", wall2_l2: "Graphit-Fassadenstyropor",
-    wall2_l3: "OSB-Platte", wall2_l4: "Mineralwolle im Rahmen",
-    wall2_l5: "Intello (intelligente Dampfbremse)", wall2_l6: "Installationsebene + Dämmung",
-    wall2_l7: "OSB-Platte", wall2_l8: "Gipskartonplatte",
+    // Wall panel 2 – energy-efficient U=0.13
+    wall2_card1: "W/m²K · erfüllt KfW 40", wall2_card2: "Trocknungsreserve · 5,3× DIN-Norm", wall2_card3: "Phasenverschiebung · Dämpfung 29×",
+    wall2_l1: "Silikonputz", wall2_l2: "EPS-grau 032 WDV",
+    wall2_l3: "OSB/3-Platte", wall2_l4: "Mineralwolle λ=0,035 im KVH 120×60 Rahmen",
+    wall2_l5: "pro clima INTELLO®", wall2_l6: "Mineralwolle in KVH 60×60 Installationsebene",
+    wall2_l7: "OSB/3-Platte", wall2_l8: "Gipskartonplatte",
 
     // Wall panel 3 – standard U=0.25
     wall3_l1: "Silikonputz", wall3_l2: "Graphit-Fassadenstyropor",
