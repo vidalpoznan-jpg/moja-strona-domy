@@ -2514,3 +2514,209 @@ body::after {
 .gsap-reveal {
   will-change: transform, opacity;
 }
+
+/* ===== Premium wall section ===== */
+.tech-premium {
+  background: #fbfaf8;
+}
+
+.tech-premium-header {
+  max-width: 920px;
+}
+
+.premium-wall-tabs {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.premium-wall-tab {
+  border: 1px solid rgba(37, 37, 39, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+  color: #3f3d39;
+  padding: 0.75rem 1.15rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.35s ease;
+}
+
+.premium-wall-tab:hover,
+.premium-wall-tab.is-active {
+  background: #1d1d1f;
+  color: #f5f1e9;
+  border-color: #1d1d1f;
+}
+
+.premium-wall-layout {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 68%) minmax(280px, 1fr);
+  gap: clamp(1.2rem, 3vw, 3rem);
+  align-items: stretch;
+}
+
+.premium-wall-stage {
+  background: #1d1d1f;
+  border-radius: 22px;
+  min-height: 520px;
+  padding: clamp(1.2rem, 2vw, 2rem);
+  box-shadow: 0 24px 70px rgba(24, 24, 26, 0.16);
+}
+
+.premium-wall-canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.premium-wall-stack {
+  width: min(680px, 92%);
+  aspect-ratio: 1.2 / 1;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.premium-wall-piece {
+  position: absolute;
+  inset: 0;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.35);
+  transform-origin: center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease, filter 0.35s ease;
+  cursor: pointer;
+}
+
+.premium-wall-piece::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -12px;
+  height: 12px;
+  border-radius: 0 0 7px 7px;
+  background: rgba(0, 0, 0, 0.35);
+  filter: blur(6px);
+  opacity: 0.52;
+}
+
+.premium-wall-piece.is-muted {
+  opacity: 0.24;
+  filter: saturate(0.7);
+}
+
+.premium-wall-piece.is-highlight {
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+.premium-wall-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(12, 12, 13, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f5f3ed;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.premium-wall-tooltip.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.premium-wall-benefits {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  border-radius: 20px;
+  padding: clamp(1.2rem, 2vw, 2rem);
+}
+
+.premium-wall-benefits-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #544e46;
+  margin-bottom: 1rem;
+}
+
+.premium-wall-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.premium-wall-benefits-list li {
+  color: #1f1f21;
+  line-height: 1.55;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.premium-wall-benefits-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #8f7655;
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+}
+
+@media (max-width: 980px) {
+  .premium-wall-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-wall-stage {
+    min-height: 420px;
+  }
+
+  .premium-wall-canvas {
+    min-height: 360px;
+  }
+
+  .premium-wall-stack {
+    width: min(560px, 95%);
+  }
+}
+
+@media (max-width: 720px) {
+  .premium-wall-tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .premium-wall-tabs {
+    flex-direction: column;
+  }
+
+  .premium-wall-piece {
+    transition: opacity 0.25s ease;
+  }
+
+  .premium-wall-tooltip {
+    display: none;
+  }
+}

@@ -181,256 +181,37 @@
 </section>
 
 <!-- ========== TECHNOLOGIA ========== -->
-<section class="section tech" id="technologia">
-  <div>
-      <div class="section-label" data-i18n="tech_label">Technologia</div>
-      <h2 class="section-title" data-i18n-html="tech_title">Przekrój <em>ściany zewnętrznej</em></h2>
-      <p class="section-text" data-i18n="tech_desc">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
-    </div>
+<section class="section tech tech-premium wall-section" id="technologia">
+  <div class="tech-premium-header">
+    <div class="section-label" data-i18n="tech_label">Technologia</div>
+    <h2 class="section-title" data-i18n-html="tech_title">Przekrój <em>ściany zewnętrznej</em></h2>
+    <p class="section-text" data-i18n="tech_desc">Przedstawiamy nasze sprawdzone konfiguracje ścian – od standardowej po pasywną. To punkty wyjścia, nie ograniczenia. Każdy przekrój dostosowujemy do wymagań projektu, zaleceń architekta lub indywidualnych preferencji inwestora.</p>
+  </div>
 
-    <div class="wall-tabs" style="display:flex;gap:0.8rem;margin-top:3rem;flex-wrap:wrap;">
-      <button class="wall-tab active" id="wall-tab-0">
-        <span class="wall-tab-u" data-i18n="wall_tab_u_1">Wewnętrzna</span>
-        <span class="wall-tab-label" data-i18n="wall_tab_1">Ściana wewnętrzna</span>
-      </button>
-      <button class="wall-tab" id="wall-tab-1">
-        <span class="wall-tab-u" data-i18n="wall_tab_u_2">Drewniana</span>
-        <span class="wall-tab-label" data-i18n="wall_tab_2">Elewacja drewniana</span>
-      </button>
-      <button class="wall-tab" id="wall-tab-2">
-        <span class="wall-tab-u">U = 0,13</span>
-        <span class="wall-tab-label" data-i18n="wall_tab_3">Energooszczędna</span>
-      </button>
-      <button class="wall-tab" id="wall-tab-3">
-        <span class="wall-tab-u">U = 0,16</span>
-        <span class="wall-tab-label" data-i18n="wall_tab_4">Standardowa</span>
-      </button>
-    </div>
+  <div class="premium-wall-tabs" role="tablist" aria-label="Warianty ściany">
+    <button class="premium-wall-tab" role="tab" aria-selected="false" data-wall-variant="wall1">Elewacja drewniana</button>
+    <button class="premium-wall-tab" role="tab" aria-selected="false" data-wall-variant="wall2">Energooszczędna</button>
+    <button class="premium-wall-tab is-active" role="tab" aria-selected="true" data-wall-variant="wall3">Standardowa</button>
+  </div>
 
-    <div class="wall-display" style="margin-top:2.5rem;">
-      <div class="wall-panel" id="wall-panel-0" style="display:flex;">
-        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-          <img src="img/asset-007.png" alt="Przekrój ściany wewnętrznej" style="max-width:100%;max-height:580px;width:auto;height:auto;display:block;">
-        </div>
-        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-          <div class="tech-u-value-number" data-i18n="wall0_title">Ściana wewnętrzna</div>
-          <div class="tech-u-value-unit" style="font-size:0.7rem;margin-top:0.3rem;" data-i18n="wall0_subtitle">Izolacja akustyczna</div>
-          </div>
-          <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall0_l1">Płyta kartonowo-gipsowa</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall0_l2">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall0_l3">Wełna akustyczna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall0_l4">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall0_l5">Płyta gipsowo-kartonowa</span></div>
-          </div>
-            <div class="cert-tech">
-              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
-              <div class="cert-preview" data-cert="0">
-                <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="1">
-                <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="2">
-                <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
-                </div>
-              </div>
-            </div>
-
-
-        </div>
-      </div>
-
-      <div class="wall-panel" id="wall-panel-1" style="display:none;">
-        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:1rem;display:flex;align-items:center;justify-content:center;">
-          <img src="img/Gemini_Generated_Image_tvxkdntvxkdntvxk.png" alt="Przekrój ściany z elewacją drewnianą U=0,14" style="max-width:100%;max-height:750px;width:auto;height:auto;display:block;">
-        </div>
-        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-            <div class="tech-u-value-number">U = 0,14</div>
-            <div class="tech-u-value-unit">W/m²K</div>
-            <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
-          </div>
-          <div style="display:flex;gap:0.6rem;margin-bottom:1.2rem;flex-wrap:wrap;">
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">0,14</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall1_card1">W/m²K · spełnia KfW 40</div>
-            </div>
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">866 g/m²a</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall1_card2">Rezerwa wysychania · 8,6× DIN</div>
-            </div>
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">10,8 h</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall1_card3">Przesunięcie fazowe · tłumienie 23×</div>
-            </div>
-          </div>
-          <div class="wall-layers"><span class="wall-layer-name" data-i18n="wall1_l1">Drewno profilowane (elewacja)</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">40 mm</span><span class="wall-layer-name" data-i18n="wall1_l2">Szczelina wentylacyjna KVH 40×60</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">60 mm</span><span class="wall-layer-name" data-i18n="wall1_l3">ROCKWOOL Fixrock 035 VS</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name" data-i18n="wall1_l4">pro clima SOLITEX FRONTA® WA</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall1_l5">Płyta OSB/3</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">120 mm</span><span class="wall-layer-name" data-i18n="wall1_l6">Wełna mineralna λ=0,035 w konstrukcji KVH 120×60</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name" data-i18n="wall1_l7">pro clima INTELLO® PLUS</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">60 mm</span><span class="wall-layer-name" data-i18n="wall1_l8">Ruszt instalacyjny KVH 60×60 + wełna</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall1_l9">Płyta OSB/3</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall1_l10">Płyta gipsowo-kartonowa</span></div>
-          </div>
-            <div class="cert-tech">
-              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
-              <div class="cert-preview" data-cert="0">
-                <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="1">
-                <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="2">
-                <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
-                </div>
-              </div>
-            </div>
-
-
-        </div>
-      </div>
-
-      <div class="wall-panel" id="wall-panel-2" style="display:none;">
-        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-          <img src="img/Gemini_Generated_Image_d5q236d5q236d5q2.png" alt="Przekrój ściany energooszczędnej U=0,13" style="max-width:100%;max-height:750px;width:auto;height:auto;display:block;">
-        </div>
-        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-            <div class="tech-u-value-number">U = 0,13</div>
-            <div class="tech-u-value-unit">W/m²K</div>
-            <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
-          </div>
-          <div style="display:flex;gap:0.6rem;margin-bottom:1.2rem;flex-wrap:wrap;">
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">0,13</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall2_card1">W/m²K · spełnia KfW 40</div>
-            </div>
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">531 g/m²a</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall2_card2">Rezerwa wysychania · 5,3× DIN</div>
-            </div>
-            <div style="flex:1;min-width:120px;background:var(--bg-secondary);border:1px solid rgba(212,184,106,0.18);border-radius:8px;padding:0.7rem 0.9rem;text-align:center;">
-              <div style="color:var(--gold);font-size:1.05rem;font-weight:600;">10,6 h</div>
-              <div style="color:var(--text-secondary);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem;" data-i18n="wall2_card3">Przesunięcie fazowe · tłumienie 29×</div>
-            </div>
-          </div>
-          <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">2 mm</span><span class="wall-layer-name" data-i18n="wall2_l1">Tynk silikonowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall2_l2">EPS grafitowy 032 WDV</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall2_l3">Płyta OSB/3</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">120 mm</span><span class="wall-layer-name" data-i18n="wall2_l4">Wełna mineralna λ=0,035 w konstrukcji KVH 120×60</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name" data-i18n="wall2_l5">pro clima INTELLO®</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">60 mm</span><span class="wall-layer-name" data-i18n="wall2_l6">Wełna mineralna w ruszcie instalacyjnym KVH 60×60</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall2_l7">Płyta OSB/3</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall2_l8">Płyta gipsowo-kartonowa</span></div>
-          </div>
-            <div class="cert-tech">
-              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
-              <div class="cert-preview" data-cert="0">
-                <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="1">
-                <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="2">
-                <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
-                </div>
-              </div>
-            </div>
-
-
-        </div>
-      </div>
-
-      <div class="wall-panel" id="wall-panel-3" style="display:none;">
-        <div style="flex:0 0 55%;min-width:0;background:var(--bg-secondary);padding:0.5rem;display:flex;align-items:center;justify-content:center;">
-          <img src="img/Gemini_Generated_Image_uccf5zuccf5zuccf.png" alt="Przekrój ściany standardowej U=0,16" style="max-width:100%;max-height:750px;width:auto;height:auto;display:block;">
-        </div>
-        <div style="flex:1;min-width:280px;padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:flex-start;">
-          <div class="tech-u-value" style="margin-top:0;margin-bottom:1.2rem;padding:1rem 1.2rem;">
-            <div class="tech-u-value-number">U = 0,16</div>
-            <div class="tech-u-value-unit">W/m²K</div>
-            <div class="tech-u-value-label" data-i18n="tech_u_label">Współczynnik przenikania ciepła</div>
-          </div>
-          <div class="wall-layers">
-          <div class="wall-layer"><span class="wall-layer-thickness">1,5 mm</span><span class="wall-layer-name" data-i18n="wall3_l1">Tynk silikonowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall3_l2">Styropian fasadowy grafitowy</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12 mm</span><span class="wall-layer-name" data-i18n="wall3_l3">Płyta OSB</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">100 mm</span><span class="wall-layer-name" data-i18n="wall3_l4">Wełna mineralna w konstrukcji</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">—</span><span class="wall-layer-name" data-i18n="wall3_l5">Intello (inteligentna paroizolacja)</span></div>
-          <div class="wall-layer"><span class="wall-layer-thickness">12,5 mm</span><span class="wall-layer-name" data-i18n="wall3_l6">Płyta gipsowo-kartonowa</span></div>
-          </div>
-            <div class="cert-tech">
-              <div class="cert-tech-label" data-i18n="cert_label">Dokumentacja i certyfikacja</div>
-              <div class="cert-preview" data-cert="0">
-                <img class="cert-thumb" src="img/asset-008.jpg" alt="DIN 1052">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title" data-i18n="cert_din_title">Certyfikat DIN 1052</div>
-                  <div class="cert-pv-desc" data-i18n="cert_din_desc">Zgodność paneli ściennych z normą budowlaną. MPA Dresden.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="1">
-                <img class="cert-thumb" src="img/asset-009.jpg" alt="Cochran Fellowship">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Cochran Fellowship</div>
-                  <div class="cert-pv-desc" data-i18n="cert_cochran_desc">Szkolenie USDA w budownictwie drewnianym, USA 1995.</div>
-                </div>
-              </div>
-              <div class="cert-preview" data-cert="2">
-                <img class="cert-thumb" src="img/asset-010.jpg" alt="Wood Housing">
-                <div class="cert-pv-info">
-                  <div class="cert-pv-title">Wood Housing Program</div>
-                  <div class="cert-pv-desc" data-i18n="cert_wood_desc">International Technology Transfer – budownictwo drewniane.</div>
-                </div>
-              </div>
-            </div>
-
-
-        </div>
+  <div class="premium-wall-layout">
+    <div class="premium-wall-stage" aria-live="polite">
+      <div class="premium-wall-canvas">
+        <div class="premium-wall-stack" id="premiumWallStack"></div>
+        <div class="premium-wall-tooltip" id="premiumWallTooltip"></div>
       </div>
     </div>
 
-    <!-- Certification badges -->
-    
-
+    <aside class="premium-wall-benefits" aria-label="Korzyści technologii">
+      <h3 class="premium-wall-benefits-title">Dlaczego ten przekrój działa?</h3>
+      <ul class="premium-wall-benefits-list">
+        <li>Wysoka izolacyjność termiczna</li>
+        <li>Kontrola wilgoci i dyfuzji</li>
+        <li>Trwała i stabilna konstrukcja</li>
+        <li>Precyzja prefabrykacji</li>
+      </ul>
+    </aside>
+  </div>
 </section>
 
 <!-- ========== KVH DREWNO ========== -->

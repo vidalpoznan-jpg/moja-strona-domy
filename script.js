@@ -792,6 +792,173 @@ if (galleryToggle && projGrid) {
     wallObs.observe(wallEl);
   }
 
+  // Premium wall cross-section experience
+  (function initPremiumWallSection() {
+    var section = document.querySelector('.tech-premium');
+    var stack = document.getElementById('premiumWallStack');
+    var tooltip = document.getElementById('premiumWallTooltip');
+    if (!section || !stack || !tooltip) return;
+
+    var variants = {
+      wall1: {
+        layers: [
+          { name: 'Drewno profilowane (elewacja)', thickness: '' },
+          { name: 'Szczelina wentylacyjna KVH 40×60', thickness: '40 mm' },
+          { name: 'ROCKWOOL Fixrock 035 VS', thickness: '60 mm' },
+          { name: 'pro clima SOLITEX FRONTA® WA', thickness: '' },
+          { name: 'Płyta OSB/3', thickness: '12 mm' },
+          { name: 'Wełna mineralna λ=0,035 w konstrukcji KVH 120×60', thickness: '120 mm' },
+          { name: 'pro clima INTELLO® PLUS', thickness: '' },
+          { name: 'Ruszt instalacyjny KVH 60×60 + wełna', thickness: '60 mm' },
+          { name: 'Płyta OSB/3', thickness: '12 mm' },
+          { name: 'Płyta gipsowo-kartonowa', thickness: '12,5 mm' }
+        ]
+      },
+      wall2: {
+        layers: [
+          { name: 'Tynk silikonowy', thickness: '2 mm' },
+          { name: 'EPS grafitowy 032 WDV', thickness: '100 mm' },
+          { name: 'Płyta OSB/3', thickness: '12 mm' },
+          { name: 'Wełna mineralna λ=0,035 w konstrukcji KVH 120×60', thickness: '120 mm' },
+          { name: 'pro clima INTELLO®', thickness: '' },
+          { name: 'Wełna mineralna w ruszcie instalacyjnym KVH 60×60', thickness: '60 mm' },
+          { name: 'Płyta OSB/3', thickness: '12 mm' },
+          { name: 'Płyta gipsowo-kartonowa', thickness: '12,5 mm' }
+        ]
+      },
+      wall3: {
+        layers: [
+          { name: 'Tynk silikonowy', thickness: '1,5 mm' },
+          { name: 'Styropian fasadowy grafitowy', thickness: '100 mm' },
+          { name: 'Płyta OSB', thickness: '12 mm' },
+          { name: 'Wełna mineralna w konstrukcji', thickness: '100 mm' },
+          { name: 'Intello (inteligentna paroizolacja)', thickness: '' },
+          { name: 'Płyta gipsowo-kartonowa', thickness: '12,5 mm' }
+        ]
+      }
+    };
+
+    var palette = ['#7f6651', '#8e7a61', '#a89679', '#757574', '#d0c4b6', '#bcae93', '#7b786f', '#8f7f69', '#d3c8b8', '#f0ece5'];
+    var currentVariant = 'wall3';
+    var sectionTop = 0;
+    var sectionHeight = 1;
+    var inView = false;
+
+    function renderWall(variantKey) {
+      currentVariant = variantKey;
+      var layers = variants[variantKey].layers;
+      stack.innerHTML = '';
+
+      layers.forEach(function(layer, index) {
+        var piece = document.createElement('button');
+        piece.type = 'button';
+        piece.className = 'premium-wall-piece';
+        piece.dataset.index = index;
+        piece.dataset.layerName = layer.name;
+        piece.dataset.layerThickness = layer.thickness;
+        piece.style.zIndex = String(layers.length - index);
+        piece.style.background = 'linear-gradient(138deg, ' + palette[index % palette.length] + ', rgba(25,25,27,0.42))';
+
+        piece.addEventListener('mouseenter', function() { highlightLayer(index); showTooltip(layer); });
+        piece.addEventListener('mouseleave', clearHighlight);
+        piece.addEventListener('focus', function() { highlightLayer(index); showTooltip(layer); });
+        piece.addEventListener('blur', clearHighlight);
+        stack.appendChild(piece);
+      });
+
+      updateExplodedState(0);
+    }
+
+    function showTooltip(layer) {
+      tooltip.textContent = layer.thickness ? (layer.name + ' · ' + layer.thickness) : layer.name;
+      tooltip.classList.add('is-visible');
+    }
+
+    function highlightLayer(index) {
+      var pieces = stack.querySelectorAll('.premium-wall-piece');
+      pieces.forEach(function(piece, i) {
+        piece.classList.toggle('is-highlight', i === index);
+        piece.classList.toggle('is-muted', i !== index);
+      });
+    }
+
+    function clearHighlight() {
+      stack.querySelectorAll('.premium-wall-piece').forEach(function(piece) {
+        piece.classList.remove('is-highlight');
+        piece.classList.remove('is-muted');
+      });
+      tooltip.classList.remove('is-visible');
+    }
+
+    function updateExplodedState(progress) {
+      var pieces = stack.querySelectorAll('.premium-wall-piece');
+      var isMobile = window.matchMedia('(max-width: 720px)').matches;
+      var spread = isMobile ? 0 : 38;
+
+      pieces.forEach(function(piece, i) {
+        var offset = (pieces.length - i - 1) * spread * (1 - progress);
+        var x = offset * 0.9;
+        var y = -offset * 0.45;
+        piece.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+      });
+    }
+
+    function syncScrollMetrics() {
+      var rect = section.getBoundingClientRect();
+      sectionTop = window.scrollY + rect.top;
+      sectionHeight = Math.max(rect.height, window.innerHeight * 0.9);
+    }
+
+    function onScroll() {
+      if (!inView) return;
+      if (window.matchMedia('(max-width: 980px)').matches) {
+        updateExplodedState(1);
+        return;
+      }
+      var rawProgress = (window.scrollY - sectionTop + window.innerHeight * 0.35) / sectionHeight;
+      var progress = Math.max(0, Math.min(rawProgress, 1));
+      updateExplodedState(progress);
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        inView = entry.isIntersecting;
+        if (entry.isIntersecting) {
+          syncScrollMetrics();
+          onScroll();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+
+    window.addEventListener('resize', function() {
+      syncScrollMetrics();
+      onScroll();
+    });
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    document.querySelectorAll('.premium-wall-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var nextVariant = tab.dataset.wallVariant;
+        if (!variants[nextVariant]) return;
+        document.querySelectorAll('.premium-wall-tab').forEach(function(el) {
+          var active = el === tab;
+          el.classList.toggle('is-active', active);
+          el.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        clearHighlight();
+        renderWall(nextVariant);
+        syncScrollMetrics();
+        onScroll();
+      });
+    });
+
+    renderWall(currentVariant);
+    syncScrollMetrics();
+    onScroll();
+  })();
+
   // Reach map interaction
   var reachItems = document.querySelectorAll('.reach-item[data-country]');
   var reachHotspots = document.querySelectorAll('.reach-hotspot[data-country]');
