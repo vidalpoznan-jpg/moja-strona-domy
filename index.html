@@ -10,6 +10,29 @@
 </head>
 <body>
 
+<!-- ========== PAGE LOADER ========== -->
+<div class="v-loader" id="vLoader">
+  <div class="v-loader-content">
+    <div class="v-loader-logo">VIDAL</div>
+    <div class="v-loader-line"></div>
+  </div>
+</div>
+
+<!-- ========== CUSTOM CURSOR ========== -->
+<div class="v-cursor" id="vCursor"></div>
+<div class="v-cursor-ring" id="vCursorRing"></div>
+
+<!-- ========== SIDE PROGRESS ========== -->
+<nav class="v-sideprog" id="vSideprog">
+  <div class="v-sideprog-dot active" data-section="hero"></div>
+  <div class="v-sideprog-dot" data-section="stats-section"></div>
+  <div class="v-sideprog-dot" data-section="o-nas"></div>
+  <div class="v-sideprog-dot" data-section="modele"></div>
+  <div class="v-sideprog-dot" data-section="technologia"></div>
+  <div class="v-sideprog-dot" data-section="realizacje"></div>
+  <div class="v-sideprog-dot" data-section="kontakt"></div>
+</nav>
+
 <!-- ========== NAVIGATION ========== -->
 <div class="scroll-progress" id="scrollProgress"></div>
 <nav class="nav" id="nav">
@@ -83,24 +106,66 @@
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-number" data-target="35">0+</div>
+  <div class="hero-stats-bar">
+    <div class="hero-stat-item">
+      <div class="hero-stat-number" data-target="35">0<span class="hero-stat-suf">+</span></div>
       <div class="hero-stat-label" data-i18n="stat_years">Lat doświadczenia</div>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-number" data-target="1000">0+</div>
+    <div class="hero-stat-item">
+      <div class="hero-stat-number" data-target="1000">0<span class="hero-stat-suf">+</span></div>
       <div class="hero-stat-label" data-i18n="stat_homes">Zrealizowanych domów</div>
     </div>
-    <div class="hero-stat">
+    <div class="hero-stat-item">
       <div class="hero-stat-number" data-target="90">0</div>
       <div class="hero-stat-label" data-i18n="stat_days">Dni – czas realizacji</div>
+    </div>
+    <div class="hero-stat-item">
+      <div class="hero-stat-number" data-target="8">0</div>
+      <div class="hero-stat-label" data-i18n="stat_countries">Krajów Europy</div>
     </div>
   </div>
 
   <div class="hero-scroll">
     <span data-i18n="scroll">Scroll</span>
     <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ========== STATS GIANT ========== -->
+<section class="section stats-giant" id="stats-section">
+  <div class="stats-giant-inner">
+    <div class="section-label" data-i18n="stats_label">Liczby, które mówią same</div>
+    <h2 class="section-title" style="max-width:780px;" data-i18n-html="stats_title">Trzy dekady budowania <em>w liczbach</em></h2>
+    <div class="stats-giant-grid">
+      <div class="stat-block reveal">
+        <div class="stat-block-num"><span data-target="35" data-giant="1">0</span><em>+</em></div>
+        <div class="stat-block-meta">
+          <div class="stat-block-label" data-i18n="stats_g1_label">lat doświadczenia</div>
+          <div class="stat-block-desc" data-i18n="stats_g1_desc">Pierwsze domy szkieletowe budowaliśmy, gdy w Polsce nikt jeszcze w tę technologię nie wierzył. Od 1988 roku — bez przerwy.</div>
+        </div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-block-num"><span data-target="1000" data-giant="1">0</span><em>+</em></div>
+        <div class="stat-block-meta">
+          <div class="stat-block-label" data-i18n="stats_g2_label">zrealizowanych domów</div>
+          <div class="stat-block-desc" data-i18n="stats_g2_desc">Każdy z nich powstał w naszej fabryce pod pełną kontrolą jakości. Od projektu po wykończenie — wszystko u nas.</div>
+        </div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-block-num"><span data-target="90" data-giant="1">0</span></div>
+        <div class="stat-block-meta">
+          <div class="stat-block-label" data-i18n="stats_g3_label">dni do odbioru kluczy</div>
+          <div class="stat-block-desc" data-i18n="stats_g3_desc">Tyle średnio trwa cała realizacja — od pierwszego cięcia drewna po klucze w Twojej ręce. Prefabrykacja zmienia reguły gry.</div>
+        </div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-block-num"><span data-target="8" data-giant="1">0</span></div>
+        <div class="stat-block-meta">
+          <div class="stat-block-label" data-i18n="stats_g4_label">krajów Europy</div>
+          <div class="stat-block-desc" data-i18n="stats_g4_desc">Polska, Niemcy, Szwajcaria, Norwegia, Austria, Francja, Anglia, Hiszpania. Domy VIDAL stoją w 8 krajach kontynentu.</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
