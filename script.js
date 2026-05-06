@@ -111,7 +111,13 @@ const i18n = {
     hero_desc: "Projektujemy i budujemy prefabrykowane domy szkieletowe – precyzyjnie, szybko i na pokolenia.",
     btn_models: "Poznaj modele", btn_consult: "Bezpłatna konsultacja",
     hero_trust: "Zaufali nam klienci z 8 krajów Europy",
-    stat_years: "Lat doświadczenia", stat_homes: "Zrealizowanych domów", stat_days: "Dni – czas realizacji",
+    stat_years: "Lat doświadczenia", stat_homes: "Zrealizowanych domów", stat_days: "Dni – czas realizacji", stat_countries: "Krajów Europy",
+    stats_label: "Liczby, które mówią same",
+    stats_title: 'Trzy dekady budowania <em>w liczbach</em>',
+    stats_g1_label: "lat doświadczenia", stats_g1_desc: "Pierwsze domy szkieletowe budowaliśmy, gdy w Polsce nikt jeszcze w tę technologię nie wierzył. Od 1988 roku — bez przerwy.",
+    stats_g2_label: "zrealizowanych domów", stats_g2_desc: "Każdy z nich powstał w naszej fabryce pod pełną kontrolą jakości. Od projektu po wykończenie — wszystko u nas.",
+    stats_g3_label: "dni do odbioru kluczy", stats_g3_desc: "Tyle średnio trwa cała realizacja — od pierwszego cięcia drewna po klucze w Twojej ręce. Prefabrykacja zmienia reguły gry.",
+    stats_g4_label: "krajów Europy", stats_g4_desc: "Polska, Niemcy, Szwajcaria, Norwegia, Austria, Francja, Anglia, Hiszpania. Domy VIDAL stoją w 8 krajach kontynentu.",
     about_label: "O firmie",
     about_title: 'Budujemy domy<br><em>od ponad 35 lat</em>',
     about_text1: "VIDAL to firma rodzinna z ponad 35-letnią tradycją w budownictwie drewnianym. Nasz ojciec był jednym z pierwszych w Polsce, który w 1988 roku rozpoczął produkcję prefabrykowanych domów w technologii szkieletu drewnianego — w czasach, gdy nikt jeszcze nie wierzył w tę metodę budowania.",
@@ -267,7 +273,13 @@ const i18n = {
     hero_desc: "We design and build prefabricated timber frame houses – precisely, quickly, and for generations.",
     btn_models: "Discover models", btn_consult: "Free consultation",
     hero_trust: "Trusted by clients from 8 European countries",
-    stat_years: "Years of experience", stat_homes: "Houses completed", stat_days: "Days – construction time",
+    stat_years: "Years of experience", stat_homes: "Houses completed", stat_days: "Days – construction time", stat_countries: "European countries",
+    stats_label: "Numbers that speak for themselves",
+    stats_title: 'Three decades of building <em>in numbers</em>',
+    stats_g1_label: "years of experience", stats_g1_desc: "We built our first timber frame houses when no one in Poland believed in this technology. Since 1988 — without a break.",
+    stats_g2_label: "houses completed", stats_g2_desc: "Each one was built in our factory under full quality control. From design to finishing — everything in-house.",
+    stats_g3_label: "days to handover", stats_g3_desc: "That's the average time for the entire build — from the first cut of wood to keys in your hand. Prefabrication changes the rules.",
+    stats_g4_label: "European countries", stats_g4_desc: "Poland, Germany, Switzerland, Norway, Austria, France, England, Spain. VIDAL homes stand in 8 countries across the continent.",
     about_label: "About us",
     about_title: 'Building homes<br><em>for over 35 years</em>',
     about_text1: "VIDAL is a family company with over 35 years of tradition in timber construction. Our father was one of the first in Poland to start manufacturing prefabricated timber frame houses in 1988 — at a time when no one yet believed in this building method.",
@@ -423,7 +435,13 @@ const i18n = {
     hero_desc: "Wir entwerfen und bauen vorgefertigte Holzrahmenhäuser – präzise, schnell und für Generationen.",
     btn_models: "Modelle entdecken", btn_consult: "Kostenlose Beratung",
     hero_trust: "Vertrauen von Kunden aus 8 europäischen Ländern",
-    stat_years: "Jahre Erfahrung", stat_homes: "Gebaute Häuser", stat_days: "Tage – Bauzeit",
+    stat_years: "Jahre Erfahrung", stat_homes: "Gebaute Häuser", stat_days: "Tage – Bauzeit", stat_countries: "Europäische Länder",
+    stats_label: "Zahlen, die für sich sprechen",
+    stats_title: 'Drei Jahrzehnte Bauen <em>in Zahlen</em>',
+    stats_g1_label: "Jahre Erfahrung", stats_g1_desc: "Wir bauten unsere ersten Holzrahmenhäuser, als in Polen noch niemand an diese Technologie glaubte. Seit 1988 — ohne Unterbrechung.",
+    stats_g2_label: "fertiggestellte Häuser", stats_g2_desc: "Jedes einzelne entstand in unserer Fabrik unter voller Qualitätskontrolle. Vom Entwurf bis zur Fertigstellung — alles bei uns.",
+    stats_g3_label: "Tage bis zur Schlüsselübergabe", stats_g3_desc: "So lange dauert die gesamte Realisierung im Durchschnitt — vom ersten Holzschnitt bis zum Schlüssel in Ihrer Hand. Vorfertigung ändert die Regeln.",
+    stats_g4_label: "europäische Länder", stats_g4_desc: "Polen, Deutschland, Schweiz, Norwegen, Österreich, Frankreich, England, Spanien. VIDAL-Häuser stehen in 8 Ländern des Kontinents.",
     about_label: "Über uns",
     about_title: 'Wir bauen Häuser<br><em>seit über 35 Jahren</em>',
     about_text1: "VIDAL ist ein Familienunternehmen mit über 35-jähriger Tradition im Holzbau. Unser Vater war einer der Ersten in Polen, der 1988 mit der Herstellung von vorgefertigten Holzrahmenhäusern begann — zu einer Zeit, als noch niemand an diese Baumethode glaubte.",
@@ -693,7 +711,7 @@ if (galleryToggle && projGrid) {
   var NAV_EL = document.getElementById('nav');
   var HERO_BG = document.querySelector('.hero-bg');
   var HERO_CONTENT = document.querySelector('.hero-content');
-  var HERO_STATS = document.querySelector('.hero-stats');
+  var HERO_STATS = document.querySelector('.hero-stats-bar');
 
   // Reveal observer
   var revealSelector = '.reveal-up, .reveal-scale, .reveal-scale-soft, .reveal-up-scale, .reveal-left, .reveal-right, .reveal-blur, .reveal-zoom, .reveal-clip-left, .stagger-group, .gold-divider, .section-label';
@@ -824,6 +842,111 @@ if (galleryToggle && projGrid) {
         else { setActiveCountry(id); activeId = id; }
       });
     });
+  }
+
+  // ── Page Loader ──────────────────────────────────────────────────
+  var loader = document.getElementById('vLoader');
+  if (loader) {
+    setTimeout(function() {
+      loader.classList.add('gone');
+      setTimeout(function() { loader.style.display = 'none'; }, 1300);
+    }, 2200);
+  }
+
+  // ── Custom Cursor (desktop only) ─────────────────────────────────
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var cur = document.getElementById('vCursor');
+    var ring = document.getElementById('vCursorRing');
+    if (cur && ring) {
+      var mx = 0, my = 0, cx = 0, cy = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
+      (function cursorLoop() {
+        cx += (mx - cx) * 0.22;
+        cy += (my - cy) * 0.22;
+        rx += (mx - rx) * 0.1;
+        ry += (my - ry) * 0.1;
+        cur.style.left = cx + 'px';
+        cur.style.top = cy + 'px';
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(cursorLoop);
+      })();
+      var hoverables = document.querySelectorAll('a, button, [onclick], input, textarea, select, .wall-tab, .model-card, .proj-card');
+      hoverables.forEach(function(el) {
+        el.addEventListener('mouseenter', function() { cur.classList.add('hover'); });
+        el.addEventListener('mouseleave', function() { cur.classList.remove('hover'); });
+      });
+    }
+  }
+
+  // ── Side Progress Dots ───────────────────────────────────────────
+  var sideprog = document.getElementById('vSideprog');
+  if (sideprog) {
+    var dots = sideprog.querySelectorAll('.v-sideprog-dot');
+    var sectionIds = [];
+    dots.forEach(function(d) { sectionIds.push(d.dataset.section); });
+
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() {
+        var target = document.getElementById(d.dataset.section);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    var updateDots = function() {
+      var scrollY = window.scrollY + window.innerHeight * 0.4;
+      var activeIdx = 0;
+      sectionIds.forEach(function(id, i) {
+        var el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) activeIdx = i;
+      });
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === activeIdx);
+      });
+      sideprog.classList.toggle('visible', window.scrollY > 200);
+    };
+    window.addEventListener('scroll', updateDots, { passive: true });
+    updateDots();
+  }
+
+  // ── Stats Giant Counter ──────────────────────────────────────────
+  var statsSection = document.getElementById('stats-section');
+  if (statsSection) {
+    var giantObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (!e.isIntersecting) return;
+        e.target.querySelectorAll('[data-giant]').forEach(function(c) {
+          if (c.dataset.done) return;
+          c.dataset.done = '1';
+          var target = parseInt(c.dataset.target);
+          var t0 = performance.now();
+          var dur = 1800;
+          function tick(now) {
+            var p = Math.min((now - t0) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            c.textContent = Math.round(target * eased).toLocaleString('pl-PL');
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+        giantObs.unobserve(e.target);
+      });
+    }, { threshold: 0.25 });
+    giantObs.observe(statsSection);
+  }
+
+  // ── Reveal Scroll Animations ─────────────────────────────────────
+  var revealEls = document.querySelectorAll('.reveal, .reveal-s');
+  if (revealEls.length) {
+    var revealObs2 = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('on');
+          revealObs2.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function(el) { revealObs2.observe(el); });
   }
 
 })();
